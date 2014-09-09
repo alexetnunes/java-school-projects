@@ -1,0 +1,19 @@
+import java.util.*;
+public class MyStringDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String word;
+		int num;
+		
+		System.out.print("Enter a word: ");
+		word = kbd.nextLine();
+		System.out.print("Enter the number of jumbled versions required: ");
+		num = kbd.nextInt();
+		
+		MyString ms = new MyString("mixed");
+		
+		for(int i = 0; i<num; i++){
+			System.out.println(ms.permute());
+		}
+	}
+}

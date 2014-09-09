@@ -1,0 +1,41 @@
+Enter a word: mixed
+Enter the number of jumbled versions required: 10
+dimex
+dmixe
+mexdi
+mxide
+miedx
+dmiex
+edxim
+dmxei
+xeidm
+eidmx
+
+
+Enter a word: Java
+Enter the number of jumbled versions required: 7
+vJaa
+Jaav
+aavJ
+Jaav
+Java
+vaaJ
+vaaJ
+
+
+Enter a word: racecar
+Enter the number of jumbled versions required: 14
+crearac
+acaecrr
+eaccrar
+ccreaar
+ecrarca
+raccera
+raarecc
+rrcaeca
+rraacec
+rarcace
+racreac
+caecrra
+arcraec
+eacarcr

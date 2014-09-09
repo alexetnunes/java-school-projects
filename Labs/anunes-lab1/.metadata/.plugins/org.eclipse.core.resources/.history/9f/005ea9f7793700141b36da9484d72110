@@ -1,0 +1,15 @@
+public class Rectangle2DDemo {
+	public static void main(String[] args) {
+		Rectangle2D r1, r2;
+		
+		r1 = new Rectangle2D(2, 2, 5.5, 4.9);
+		r2 = new Rectangle2D(4, 5, 10.5, 3.2);
+		
+		System.out.println("Rectangle 1:\nr1);
+		System.out.println();
+		System.out.println("Does r1.contains(3, 3));
+		System.out.println(r1.contains(r2));
+		System.out.println(r1.overlaps(r2));
+		
+	}
+}

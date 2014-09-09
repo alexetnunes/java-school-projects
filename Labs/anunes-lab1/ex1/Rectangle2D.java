@@ -1,0 +1,95 @@
+/* 
+ * Rectangle2D Class
+ * Alex Nunes
+ * 08/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Creates a Rectangle2D object with xpos, ypos
+ * width, and height
+ */
+public class Rectangle2D {
+	
+	private double xpos;
+	private double ypos;
+	private double width;
+	private double height;
+	
+	public Rectangle2D() {
+		
+	}
+	
+	//Constructor
+	public Rectangle2D(double xpos, double ypos, double width, double height) {
+		super();
+		this.xpos = xpos;
+		this.ypos = ypos;
+		this.width = width;
+		this.height = height;
+	}
+	
+	//Getters and Setters
+	public double getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(double xpos) {
+		this.xpos = xpos;
+	}
+
+	public double getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(double ypos) {
+		this.ypos = ypos;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	public double getArea() {
+		return height*width;
+	}
+	
+	public double getPerimeter() {
+		return (height*2) + (width*2);
+	}
+	
+	// Determines if the rectangle contains a point
+	public boolean contains(double px, double py) {
+		return (px >= xpos && px <= xpos+width && py >= ypos && py <= ypos+height);
+	}
+	
+	// Determines if the rectangle  contains another rectangle
+	public boolean contains(Rectangle2D r) {
+		return (contains(r.getXpos(), r.getYpos()) && contains((r.getXpos()+r.getWidth()),(r.getYpos()+r.getHeight())));
+	}
+	
+	// Determines if a rectangle overlaps another rectangle
+	public boolean overlaps(Rectangle2D r){
+		return (xpos+width >= r.getXpos() &&
+				ypos+height >= r.getYpos() &&
+				xpos <= r.getXpos()+r.getWidth() &&
+				ypos <= r.getYpos()+r.getHeight()
+				);
+	}
+	
+	//toString for Rectangle2D object
+	public String toString(){
+		return "Origin:[" +xpos +","+ ypos + "]" + "\nWidth:"+width+ "\nHeight:"+height + "\nArea:"+getArea() +"\nPerimeter:"+getPerimeter();
+	}
+}

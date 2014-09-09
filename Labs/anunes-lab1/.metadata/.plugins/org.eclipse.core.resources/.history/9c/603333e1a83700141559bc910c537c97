@@ -1,0 +1,10 @@
+import java.util.*;
+public class Triangle2DDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		
+		double p1, p2, p3;
+		
+		Triangle2D t1, t2;
+	}
+}

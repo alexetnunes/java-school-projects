@@ -1,0 +1,35 @@
+import java.util.*;
+public class Triangle2DDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		
+		double x,y;
+		
+		Point p1, p2, p3, p4;
+		
+		Triangle2D t1, t2;
+		
+		System.out.println("Enter the first point for triangle 1: ");
+		x = kbd.nextDouble();
+		y = kbd.nextDouble();
+		p1 = new Point(x,y);
+		
+		System.out.println("Enter the second point for triangle 2: ");
+		x = kbd.nextDouble();
+		y = kbd.nextDouble();
+		p2 = new Point(x,y);
+		
+		System.out.println("Enter the third point(x,y) for triangle 3: ");
+		x = kbd.nextDouble();
+		y = kbd.nextDouble();
+		p3 = new Point(x,y);
+		
+		t1 = new Triangle2D(p1, p2, p3);
+		
+		System.out.println(t1);
+		
+		System.out.println("Enter a point");
+		
+		
+	}
+}

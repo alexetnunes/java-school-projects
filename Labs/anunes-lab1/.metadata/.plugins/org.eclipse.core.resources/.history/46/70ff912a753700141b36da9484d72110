@@ -1,0 +1,8 @@
+import java.util.*;
+public class Rectangle2DDemo {
+	public static void main(String[] args) {
+		Rectangle2D rect1, rect2;
+		
+		Scanner kbd = new Scanner(Sysemt.in);
+	}
+}

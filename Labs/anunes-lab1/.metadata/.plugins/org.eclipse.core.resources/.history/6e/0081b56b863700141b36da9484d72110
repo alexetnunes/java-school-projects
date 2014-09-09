@@ -1,0 +1,4 @@
+
+public class Triangle2D {
+	private Point p1,p2,p3;
+}

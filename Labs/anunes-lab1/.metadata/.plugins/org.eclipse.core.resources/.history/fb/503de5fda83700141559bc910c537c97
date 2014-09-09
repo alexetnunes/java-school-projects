@@ -1,0 +1,14 @@
+import java.util.*;
+public class Triangle2DDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		
+		double x,y;
+		
+		Point p1, p2, p3, p4;
+		
+		Triangle2D t1, t2;
+		
+		System.out.println("Enter the ");
+	}
+}

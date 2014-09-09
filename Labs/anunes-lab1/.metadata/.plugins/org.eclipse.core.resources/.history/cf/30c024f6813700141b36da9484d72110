@@ -1,0 +1,36 @@
+
+public class MyString {
+	private String word;
+	
+	public MyString() {
+		
+	}
+
+	public MyString(String word) {
+		super();
+		this.word = word;
+	}
+
+	public String getWord() {
+		return word;
+	}
+
+	public void setWord(String word) {
+		this.word = word;
+	}
+	
+	public String permute(){
+		String permutedResult="";
+		
+		char[] chars = word.toCharArray();
+		int[] indexes = new int[chars.length];;
+		for(int i = 0; i>chars.length-1; i++) {
+			int rand = (int)((chars.length-1)*Math.random());
+			for(int j = 0; j < indexes.length-1; j++)
+				if(rand == j)
+			
+			
+		}
+		return permutedResult;
+	}
+}

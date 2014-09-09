@@ -1,0 +1,13 @@
+Enter the end points for the first line segment: 2 2 0 0
+Enter the end points for the second line segment: 0 2 2 0
+The intersecting point is 1.0, 1.0
+
+
+Enter the end points for the first line segment: 4 5 8 9
+Enter the end points for the second line segment: 1 1 1 1
+This equation is not solvable!
+
+
+Enter the end points for the first line segment: 7 2 4 5
+Enter the end points for the second line segment: 0 2 3 0
+The intersecting point is 21.0, -12.0

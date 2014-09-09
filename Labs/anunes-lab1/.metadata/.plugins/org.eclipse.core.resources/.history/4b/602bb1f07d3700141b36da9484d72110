@@ -1,0 +1,8 @@
+
+public class MyString {
+	private String word;
+	
+	public MyString() {
+		
+	}
+}

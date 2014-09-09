@@ -1,0 +1,39 @@
+import java.util.*;
+public class LinearEquationDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		double x1,x2,x3,x4,y1,y2,y3,y4;
+		
+		System.out.println("Enter the end points for the first line segment: ");
+		x1 = kbd.nextDouble();
+		System.out.println("Please enter x2:");
+		x2 = kbd.nextDouble();
+		System.out.println("Please enter x3:");
+		x3 = kbd.nextDouble();
+		System.out.println("Please enter x4:");
+		x4 = kbd.nextDouble();
+		System.out.println("Please enter y1:");
+		y1 = kbd.nextDouble();
+		System.out.println("Please enter y2:");
+		y2 = kbd.nextDouble();
+		System.out.println("Please enter y3:");
+		y3 = kbd.nextDouble();
+		System.out.println("Please enter y4:");
+		y4 = kbd.nextDouble();
+
+		double a = (y1 - y2);
+		double b = (-x1 + x2);
+		double c = (y3 - y4);
+		double d = (-x3 + x4);
+		double e = -y1 * (x1 - x2) + (y1 - y2) * x1;
+		double f = -y3 * (x3 - x4) + (y3 - y4) * x3;
+		
+		LinearEquation le = new LinearEquation(a,b,c,d,e,f);
+		
+		if(le.isSolvable()){
+			System.out.println("The intersecting point is "+le.getX()+", "+le.getY());
+		}else{
+			System.out.println("This equation is not solvable!");
+		}
+	}
+}

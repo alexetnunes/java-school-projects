@@ -1,0 +1,72 @@
+
+public class Rectangle2D {
+	
+	private int xpos;
+	private int ypos;
+	private int width;
+	private int height;
+	
+	public Rectangle2D() {
+		
+	}
+	
+	public Rectangle2D(int xpos, int ypos, int width, int height) {
+		super();
+		this.xpos = xpos;
+		this.ypos = ypos;
+		this.width = width;
+		this.height = height;
+	}
+
+	public int getXpos() {
+		return xpos;
+	}
+
+	public void setXpos(int xpos) {
+		this.xpos = xpos;
+	}
+
+	public int getYpos() {
+		return ypos;
+	}
+
+	public void setYpos(int ypos) {
+		this.ypos = ypos;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	public int getArea() {
+		return height*width;
+	}
+	
+	public int getPerimeter() {
+		return (height*2) + (width*2);
+	}
+	
+	public boolean contains(int px, int py) {
+		return (px >= xpos && px <= xpos+width && py >= ypos && py <= ypos+height);
+	}
+	
+	public boolean contains(Rectangle2D r) {
+		return (contains(r.getXpos(), r.getYpos()) && contains((r.getXpos()+r.getWidth()),(r.getYpos()+r.getHeight())));
+	}
+	
+	public boolean overlap(Rectangle2D r){
+		return false;
+	}
+}

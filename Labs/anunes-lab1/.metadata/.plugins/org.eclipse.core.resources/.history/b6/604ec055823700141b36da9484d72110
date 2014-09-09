@@ -1,0 +1,12 @@
+import java.util.*;
+public class MyStringDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String word;
+		int num;
+		
+		System.out.println("Enter a word: ");
+		word = kbd.nextLine();
+		System.out.println("Enter the number of jumbled versions required: ");
+	}
+}

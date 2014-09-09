@@ -1,0 +1,32 @@
+/* 
+ * MyString Demo
+ * Alex Nunes
+ * 08/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Creates a MyString Object with a String
+ */
+import java.util.*;
+public class MyStringDemo {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String word;
+		int num;
+		
+		System.out.print("Enter a word: ");
+		word = kbd.nextLine();
+		System.out.print("Enter the number of jumbled versions required: ");
+		num = kbd.nextInt();
+		
+		MyString ms = new MyString(word);
+		
+		for(int i = 0; i<num; i++){
+			String newWord = ms.permute();
+			
+			if(word != newWord ){
+				System.out.println(newWord);
+			}
+		}
+	}
+}

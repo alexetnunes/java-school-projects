@@ -1,0 +1,17 @@
+Rectangle 1:
+Origin:[2.0,2.0]
+Width:5.5
+Height:4.9
+Area:26.950000000000003
+Perimeter:20.8
+
+Rectangle 2:
+Origin:[4.0,5.0]
+Width:10.5
+Height:3.2
+Area:33.6
+Perimeter:27.4
+
+Does rectangle 1 contain 3,3? true
+Does rectangle 1 contains rectangle 2? false
+Do rectangle 1 and rectangle 2 overlap? true

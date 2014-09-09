@@ -1,0 +1,28 @@
+import java.util.*;
+public class MyString {
+	private String word;
+	
+	public MyString() {
+		
+	}
+
+	public MyString(String word) {
+		super();
+		this.word = word;
+	}
+
+	public String getWord() {
+		return word;
+	}
+
+	public void setWord(String word) {
+		this.word = word;
+	}
+	
+	public String permute(){
+		String permutedResult="";
+		
+		char[] chars = word.toCharArray();
+		return permutedResult;
+	}
+}

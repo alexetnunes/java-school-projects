@@ -1,0 +1,8 @@
+public class Rectangle2DDemo {
+	public static void main(String[] args) {
+		Rectangle2D rect1, rect2;
+		
+		rect1 = new Rectangle2D(2,2,5.5, 4.9);
+		
+	}
+}

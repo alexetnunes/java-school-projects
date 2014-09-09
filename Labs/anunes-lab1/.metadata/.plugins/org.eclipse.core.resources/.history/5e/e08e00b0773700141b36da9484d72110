@@ -1,0 +1,24 @@
+import java.util.*;
+public class Rectangle2DDemo {
+	public static void main(String[] args) {
+		Rectangle2D rect1, rect2;
+		int xpos,ypos,height, width;
+		
+		Scanner kbd = new Scanner(System.in);
+		
+		System.out.println("Please enter X position of first rectangle:");
+		xpos = kbd.nextInt();
+		
+		System.out.println("Please enter Y position of first rectangle:");
+		xpos = kbd.nextInt();
+
+		System.out.println("Please enter width of first rectangle:");
+		xpos = kbd.nextInt();
+
+		System.out.println("Please enter height of first rectangle:");
+		xpos = kbd.nextInt();
+		
+		rect1 = new Rectangle2D(xpos, ypos, width, height);
+		
+	}
+}
