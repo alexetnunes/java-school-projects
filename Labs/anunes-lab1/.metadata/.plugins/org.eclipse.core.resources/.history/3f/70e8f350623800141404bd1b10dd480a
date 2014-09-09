@@ -82,8 +82,15 @@ public class Rectangle2D {
 	
 	// Determines if a rectangle overlaps another rectangle
 	public boolean overlaps(Rectangle2D r){
-		return (xpos < r.getXpos()+r.getWidth() && r.getXpos() < xpos+width &&
-				ypos < r.getYpos()+r.getHeight() && r.getYpos() < ypos+width);
+		return (contains(r.getXpos(), r.getYpos()) || 
+				contains((r.getXpos()),(r.getYpos()+r.getHeight()))||
+				contains((r.getXpos()+r.getWidth()),(r.getYpos()))||
+				contains((r.getXpos()+r.getWidth()),(r.getYpos()+r.getHeight()))||
+				r.contains(x,y) || 
+				r.contains((getXpos()),(r.getYpos()+r.getHeight()))||
+				r.contains((getXpos()+getWidth()),(getYpos()))||
+				r.contains((getXpos()+getWidth()),(getYpos()+r.getHeight()))
+				);
 	}
 	
 	//toString for Rectangle2D object

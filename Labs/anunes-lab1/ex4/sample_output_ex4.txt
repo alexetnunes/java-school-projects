@@ -1,0 +1,56 @@
+Enter the first point(x,y) for triangle 1: 0 6
+Enter the second(x,y) point for triangle 1: 6 0
+Enter the third point(x,y) for triangle 1: 0 0
+Area: 17.99999999999999
+Perimeter: 20.485281374238568
+Enter a point(x,y): 2 2
+The point [2.0,2.0] is in triangle 1.
+Enter the first point(x,y) for triangle 2: 1 1
+Enter the second(x,y) point for triangle 2: 2 1
+Enter the third point(x,y) for triangle 2: 1 2
+Area: 0.49999999999999983
+Perimeter: 3.414213562373095
+Triangle 1 contains triangle 2.
+
+
+Enter the first point(x,y) for triangle 1: 4 5
+Enter the second(x,y) point for triangle 1: 7 8
+Enter the third point(x,y) for triangle 1: 2 4
+Area: 1.4999999999999898
+Perimeter: 12.881832902051922
+Enter a point(x,y): 6 5
+The point [6.0,5.0] is not in triangle 1.
+Enter the first point(x,y) for triangle 2: 0 0
+Enter the second(x,y) point for triangle 2: 3 4
+Enter the third point(x,y) for triangle 2: 7 9
+Area: 0.5000000000004073
+Perimeter: 22.80487848842423
+Triangle 1 does not contain triangle 2.
+
+Enter the first point(x,y) for triangle 1: 0 4
+Enter the second(x,y) point for triangle 1: 4 0
+Enter the third point(x,y) for triangle 1: 9 9
+Area: 27.999999999999996
+Perimeter: 26.24811453146638
+Enter a point(x,y): 5 5
+The point [5.0,5.0] is in triangle 1.
+Enter the first point(x,y) for triangle 2: 3 3
+Enter the second(x,y) point for triangle 2: 8 8
+Enter the third point(x,y) for triangle 2: 6 7
+Area: 2.499999999999999
+Perimeter: 14.307135789365265
+Triangle 1 contains triangle 2.
+
+Enter the first point(x,y) for triangle 1: 0 7
+Enter the second(x,y) point for triangle 1: 7 0
+Enter the third point(x,y) for triangle 1: 0 0
+Area: 24.50000000000001
+Perimeter: 23.899494936611667
+Enter a point(x,y): 3 3
+The point [3.0,3.0] is in triangle 1.
+Enter the first point(x,y) for triangle 2: 4 5
+Enter the second(x,y) point for triangle 2: 7 8
+Enter the third point(x,y) for triangle 2: 0 9
+Area: 11.999999999999993
+Perimeter: 16.97056274847714
+Triangle 1 does not contain triangle 2.
