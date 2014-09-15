@@ -1,0 +1,10 @@
+import java.util.*;
+public class BinaryPower {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		int n;
+		
+		System.out.println("Enter the value of n:");
+		n = kbd.nextInt();
+	}
+}
