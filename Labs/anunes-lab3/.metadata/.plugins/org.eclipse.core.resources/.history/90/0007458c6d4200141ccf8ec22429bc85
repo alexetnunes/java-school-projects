@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class StringMatch {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String s1, s2, matchedIndices ="";
+		
+		System.out.print("Enter a string s1:");
+		s1 = kbd.next();
+		
+		System.out.print("Enter a string s2:");
+		s2 = kbd.next();
+		
+		for(int i=0; i < s1.length(); i++){
+			if(s1.substring(i, endIndex))
+		}
+	}
+
+}

@@ -1,0 +1,34 @@
+Enter the upper limit:800000
+
+Method1:800000 | Execution Time: 220176ms
+
+Method2:800000 | Execution Time: 107962ms
+
+Method3:800000 | Execution Time: 348ms
+
+
+Enter the upper limit:1000000
+
+Method1:1000000 | Execution Time: 335624ms
+
+Method2:1000000 | Execution Time: 173179ms
+
+Method3:1000000 | Execution Time: 500ms
+
+
+Enter the upper limit:1200000
+
+Method1:1200000 | Execution Time: 487860ms
+
+Method2:1200000 | Execution Time: 251202ms
+
+Method3:1200000 | Execution Time: 697ms
+
+
+Enter the upper limit:1600000
+
+Method1:1600000 | Execution Time: 870515ms
+
+Method2:1600000 | Execution Time: 458077ms
+
+Method3:1600000 | Execution Time: 935ms

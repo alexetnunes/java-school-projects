@@ -1,18 +1,32 @@
+/* 
+ * MatrixMult Class
+ * Alex Nunes
+ * 17/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Determine the speed at which a program can
+ * multiply two matrices of size n
+ */
+
 //Multiplication of two square matrices of size n X n each
 import java.util.Scanner;
 public class MatrixMult {
 	/* Main method */
 	 public static void main(String[] args) {
+		 //Declare variables and scanner
 		 Scanner keyboard = new Scanner(System.in);
 		 int n;
 		 double num;
 		 
+		 //Take in n and the number
 		 System.out.print("Enter the size of each matrix: ");
 		 n = keyboard.nextInt();
 		 System.out.println("Enter the matrix element");
 		 System.out.print("All elements of the matrices are assumed to be the same: ");
 		 num = keyboard.nextDouble();
 		 
+		 //Create Matrices
 		 double[][] matrix1 = new double[n][n];
 		 for (int i = 0; i < n; i++)
 		 for (int j = 0; j < n; j++)
@@ -23,9 +37,12 @@ public class MatrixMult {
 		 matrix2[i][j] = num;
 		 
 		 
-		 long startTime, endTime, executionTime;
+		long startTime, endTime, executionTime;
+		//Record start time
 		startTime = System.currentTimeMillis();
+		//Multiply matrices
 		double[][] resultMatrix = multiplyMatrix(matrix1, matrix2);
+		//Record end time, figure out the execution time then print
 		endTime = System.currentTimeMillis();
 		executionTime = endTime - startTime;
 		System.out.println("Execution time: " + executionTime + " millisecs");
@@ -47,7 +64,7 @@ public class MatrixMult {
 		 return m3;
 	 }
 	 
-	 /*Method to print matrix*/
+	 /*Method to print matrix if needed*/
 	 public static void print2d(double[][] m){
 		 for(int i=0; i<m.length; i++){
 			 for(int j=0; j<m.length; j++){

@@ -1,0 +1,13 @@
+
+public class FastPiece extends Piece {
+
+	public FastPiece() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public FastPiece(String name, String colour, int[] position) {
+		super(name, colour, position);
+		// TODO Auto-generated constructor stub
+	}
+
+}

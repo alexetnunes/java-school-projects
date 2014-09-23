@@ -1,0 +1,14 @@
+Enter the filename to read from: DNASequence.rtf
+Enter the string to match:AAC
+Matches:2777
+Execution Time: 43ms
+
+Enter the filename to read from: DNASequence.rtf
+Enter the string to match:AATCG
+Matches:110
+Execution Time: 42ms
+
+Enter the filename to read from: DNASequence.rtf
+Enter the string to match:@#$6345
+Matches:0
+Execution Time: 42ms

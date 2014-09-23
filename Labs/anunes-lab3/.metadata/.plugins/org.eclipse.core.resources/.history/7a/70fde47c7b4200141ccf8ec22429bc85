@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class FibonacciGCD {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		long fib1, fib2;
+		long gcd;
+		long startTime, endTime, executionTime;
+		
+		System.out.println("Enter first index of Fibonacci Sequence:");
+		fib1 = fibonacci(kbd.nextInt());
+		System.out.println("Enter first index of Fibonacci Sequence:");
+		fib2 = fibonacci(kbd.nextInt());
+		
+		startTime = System.currentTimeMillis();
+		gcd = GCDMethod1(fib1,fib2);
+		endTime = System.currentTimeMillis();
+		executionTime = endTime - startTime;
+		
+		System.out.println("GCD is "+gcd);
+		System.out.println("Execution Time: "+ executionTime +"ms");
+		
+		startTime = System.currentTimeMillis();
+		gcd = GCDMethod2(fib1,fib2);
+		endTime = System.currentTimeMillis();
+		executionTime = endTime - startTime;
+		
+		System.out.println("GCD is "+gcd);
+		System.out.println("Execution Time: "+ executionTime +"ms");
+	}
+	
+	public static long GCDMethod1(long a, long b){
+		long gcd = 1;
+		long min = Math.min(a, b);
+		
+		for(long i = 2; i < min; i++){
+			if(a%i == 0 && b%i == 0){
+				gcd = i;
+			}
+		}
+		return gcd;
+	}
+	
+	public static long GCDMethod2(long a, long b){
+		long gcd = 1;
+		long min = Math.min(a, b)/2;
+		
+		for(long i = min; i > 1; i--){
+			if(a%i == 0 && b%i == 0){
+				gcd = i;
+				i = 0;
+			}
+		}
+		
+		return gcd;
+	}
+	
+	public static long fibonacci(int n) {
+       long fibonacci;
+      
+       if(n<=1){
+    	   fibonacci=1;
+       }else{
+    	   fibonacci = fibonacci(n-1)+fibonacci(n-2);
+       }
+       
+       return fibonacci;
+    }
+}

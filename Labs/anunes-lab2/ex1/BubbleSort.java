@@ -1,17 +1,34 @@
+/* 
+ * BubbleSort Class
+ * Alex Nunes
+ * 17/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * BubbleSort class to determine the run time 
+ * at different values of n
+ */
 public class BubbleSort {
 	public static void main(String[] args) {
+		//Declare variables
 		long startTime, endTime, executionTime;
 
 		int[] arrayLengths = {1000,5000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000};
 		
+		//Loop through arrayLengths and run for arrays of each value
 		for(int j=0; j < arrayLengths.length; j++){
+			//Create new array
 			int[] numArray = new int[arrayLengths[j]];
 			
+			//Fill up new array with values
 			for(int i=0; i<numArray.length; i++){
 				numArray[i] = (int)(Math.random()*500) + 1;
 			}
 			
+			//Record start time
 			startTime = System.currentTimeMillis();
+			
+			//Bubble sort the array
 			for (int pass = 1; pass< numArray.length; pass++){
 				 for(int i=0;i< numArray.length-1;i++) {
 					 if(numArray[i] >= numArray[i+1]){
@@ -21,7 +38,7 @@ public class BubbleSort {
 					 }
 				 }
 			}
-					 
+			//Record end time, figure out the execution time then print
 			endTime = System.currentTimeMillis();
 			executionTime = endTime - startTime;
 			System.out.println(numArray.length +":" + executionTime+"ms");
@@ -29,6 +46,7 @@ public class BubbleSort {
 
 	}
 	
+	//Method to print array if needed
 	public static void printArray(int[] array){
 		System.out.print("[");
 		for(int i=0; i<array.length; i++){

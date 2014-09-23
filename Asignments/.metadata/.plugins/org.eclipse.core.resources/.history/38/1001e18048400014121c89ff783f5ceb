@@ -1,0 +1,6 @@
+
+public class SlowPiece extends Piece {
+	public void move(int direction) {
+		
+	}
+}

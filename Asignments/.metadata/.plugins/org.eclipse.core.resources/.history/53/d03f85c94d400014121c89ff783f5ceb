@@ -1,0 +1,12 @@
+
+public class FastFlexible extends FastPiece {
+
+	public FastFlexible() {
+		
+	}
+
+	public FastFlexible(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+
+}

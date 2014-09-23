@@ -1,0 +1,44 @@
+
+public class Piece {
+	private String name;
+	private int colour;
+	private	int [] position = new int[2];
+	
+	public Piece() {
+		
+	}
+	
+	public Piece(String name, int colour, int[] position) {
+		this.name = name;
+		this.colour = colour;
+		this.position = position;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getColour() {
+		return colour;
+	}
+
+	public void setColour(int colour) {
+		this.colour = colour;
+	}
+
+	public String getPosition() {
+		return "("+this.position[0]+", "+this.position[1]+")";
+	}
+
+	public void setPosition(int x, int y) {
+		this.position[0] = x;
+		this.position[1] = y;
+	}
+	
+	
+	
+}

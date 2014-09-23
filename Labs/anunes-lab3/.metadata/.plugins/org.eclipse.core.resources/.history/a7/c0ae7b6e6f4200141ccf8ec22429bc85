@@ -1,0 +1,34 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class DNAAnalysis {
+
+	public static void main(String[] args) throws IOException {
+		Scanner kbd = new Scanner(System.in);
+		String match, matchedIndices =" ";
+		
+		System.out.print("Enter the filename to read from: ");
+		
+		String filename = kbd.nextLine();
+		File file = new File(filename);
+		
+		Scanner inputFile = new Scanner(file);
+		while (inputFile.hasNext())
+		{
+		String line = inputFile.nextLine();
+		System.out.println(line);
+		}
+		inputFile.close();
+		
+		for(int i=0; i < line.length()-match.length(); i++){
+			if(s1.substring(i, i + s2.length()).equalsIgnoreCase(s2)){
+				matchedIndices += i+" ";
+			}
+		}
+		
+		System.out.println("Matched Indexes:" + matchedIndices);
+
+	}
+
+}

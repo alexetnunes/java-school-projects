@@ -1,0 +1,11 @@
+
+public class SlowPiece extends Piece {
+	
+	public void move(int direction) {
+		if(direction < 0){
+			this.position[0] = this.position[0] -1;
+		}else{
+			
+		}
+	}
+}

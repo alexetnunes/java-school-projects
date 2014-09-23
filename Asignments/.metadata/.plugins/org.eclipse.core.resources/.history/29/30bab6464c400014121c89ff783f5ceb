@@ -1,0 +1,30 @@
+
+public class SlowFlexible extends SlowPiece {
+
+	public SlowFlexible() {
+
+	}
+
+	public SlowFlexible(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+
+
+	public void move(int direction, String updown) {
+		if(updown.equalsIgnoreCase("up")){
+			
+		}else if(updown.equalsIgnoreCase("down")){
+			
+		}else{
+			
+		}
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+	
+
+}

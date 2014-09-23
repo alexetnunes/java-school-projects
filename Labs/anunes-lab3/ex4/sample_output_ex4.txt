@@ -1,0 +1,22 @@
+Enter first index of Fibonacci Sequence:30
+Enter first index of Fibonacci Sequence:31
+
+Method1:
+GCD is 1
+Execution Time: 22ms
+
+Method2:
+GCD is 1
+Execution Time: 12ms
+
+
+Enter first index of Fibonacci Sequence:34
+Enter first index of Fibonacci Sequence:35
+
+Method1:
+GCD is 1
+Execution Time: 190ms
+
+Method2:
+GCD is 1
+Execution Time: 83ms

@@ -1,0 +1,12 @@
+
+public class FastPiece extends Piece {
+
+	public FastPiece() {
+		
+	}
+
+	public FastPiece(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+
+}

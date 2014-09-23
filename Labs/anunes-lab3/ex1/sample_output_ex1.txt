@@ -1,0 +1,11 @@
+Enter a string s1:mississippi
+Enter a string s2:is
+Matched Indexes: 1 4
+
+Enter a string s1:racecarracecar
+Enter a string s2:car
+Matched Indexes: 4 11
+
+Enter a string s1:lsakjdlaskjdlasjk
+Enter a string s2:mxcnb
+Matched Indexes:None

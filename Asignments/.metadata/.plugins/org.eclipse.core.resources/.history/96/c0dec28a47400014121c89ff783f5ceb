@@ -1,0 +1,19 @@
+
+public class Piece {
+	private String name;
+	private int colour;
+	private	int [] position = new int[2];
+	
+	public Piece() {
+		
+	}
+	
+	public Piece(String name, int colour, int[] position) {
+		this.name = name;
+		this.colour = colour;
+		this.position = position;
+	}
+	
+	
+	
+}

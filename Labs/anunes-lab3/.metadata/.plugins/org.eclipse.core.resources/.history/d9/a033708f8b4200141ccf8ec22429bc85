@@ -1,0 +1,79 @@
+/* 
+ * PrimeProgram
+ * Alex Nunes
+ * 22/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Uses one of three methods to find all of the
+ * prime numbers between one and a given integer
+ */
+import java.util.Scanner;
+public class Prime {
+	public static void main(String[] args) {
+		
+		Scanner kbd = new Scanner(System.in);
+		long startTime, endTime, executionTime;
+		long num;
+		
+		System.out.print("Enter the upper limit:");
+		num = kbd.nextLong();
+		
+		
+		
+		System.out.println();
+		startTime = System.currentTimeMillis();
+		PrimeMethod2(num);
+		endTime = System.currentTimeMillis();
+		executionTime = endTime - startTime;
+		System.out.println(num+"\nExecution Time: "+executionTime+"ms");
+		
+		
+	}
+	
+	//Search through 1 - n for prime numbers
+	public static void PrimeMethod1(long n){
+		for(int i=2; i<=n; i++){
+			boolean prime=true;
+			for(int j=2; j<=i-1; j++){
+				if(i%j==0){
+					prime = false;
+				}
+			}
+			if(prime){
+				System.out.print(i+" ");
+			}
+		}
+	}
+	
+	//Search through 1 - n/2 for prime numbers
+	public static void PrimeMethod2(long n){
+		for(int i=2; i<=n; i++){
+			boolean prime=true;
+			for(int j=1; j<=(i-1)/n; j++){
+				if(i%j==0){
+					prime = false;
+				}
+			}
+			if(prime){
+				System.out.print(i+" ");
+			}
+		}
+	}
+
+	//Search through 1 - sqrt(n) for prime numbers
+	public static void PrimeMethod3(long n){
+		for(int i=2; i<=n; i++){
+			boolean prime=true;
+			for(int j=2; j<=Math.sqrt(i); j++){
+				if(i%j==0){
+					prime = false;
+				}
+				if(prime){
+					System.out.print(i+" ");
+				}
+			}
+		}
+	}
+
+}

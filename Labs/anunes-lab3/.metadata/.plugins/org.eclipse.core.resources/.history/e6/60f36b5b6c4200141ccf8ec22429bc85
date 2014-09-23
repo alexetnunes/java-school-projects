@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class StringMatch {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String s1, s2;
+		
+		System.out.print("Enter a string s1;");
+	}
+
+}

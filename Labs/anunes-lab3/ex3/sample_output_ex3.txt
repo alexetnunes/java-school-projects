@@ -1,0 +1,11 @@
+Enter 1 for Method1 or 2 for Method2:1
+Enter the first integer:129387982
+Enter the second integer:1233423
+GCD is 1
+Execution Time: 19ms
+
+Enter 1 for Method1 or 2 for Method2:2
+Enter the first integer:129387982
+Enter the second integer:1233423
+GCD is 1
+Execution Time: 11ms

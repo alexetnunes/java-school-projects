@@ -1,0 +1,24 @@
+import java.util.*;
+public class BinaryPower {
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		int n;
+		String sb;
+		long startTime, endTime, executionTime;
+		
+		System.out.print("Enter the value of n:");
+		n = kbd.nextInt();
+		
+		int power = (int)Math.pow(2,n);
+		
+		startTime = System.currentTimeMillis();
+		for(int i =0; i<power;i++){
+			sb = Integer.toBinaryString(i);
+			//System.out.println(sb);
+		}
+		endTime = System.currentTimeMillis();
+		executionTime = endTime - startTime;
+		
+		System.out.println("Execution time to generate 2^"+n+" binary numbers: "+executionTime+"ms");
+	}
+}

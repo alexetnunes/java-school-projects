@@ -1,0 +1,40 @@
+public class BubbleSort {
+	public static void main(String[] args) {
+		long startTime, endTime, executionTime;
+
+		int[] arrayLengths = {1000,5000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000};
+		
+		for(int j=0; j < arrayLengths.length; j++){
+			int[] numArray = new int[arrayLengths[j]];
+			
+			for(int i=0; i<numArray.length; i++){
+				numArray[i] = (int)(Math.random()*500) + 1;
+			}
+			
+			startTime = System.currentTimeMillis();
+			for (int pass = 1; pass< numArray.length; pass++){
+				 for(int i=0;i< numArray.length-1;i++) {
+					 if(numArray[i] >= numArray[i+1]){
+						 int hold = numArray[i];
+						 numArray[i] = numArray[i+1];
+						 numArray[i+1] = hold;
+					 }
+				 }
+			}
+			//Record end time, figure out the execution time then print
+			endTime = System.currentTimeMillis();
+			executionTime = endTime - startTime;
+			System.out.println(numArray.length +":" + executionTime+"ms");
+		}
+
+	}
+	
+	public static void printArray(int[] array){
+		System.out.print("[");
+		for(int i=0; i<array.length; i++){
+			System.out.print(array[i]+" ");
+		}
+		System.out.print(" ]");
+		System.out.println();
+	}
+}

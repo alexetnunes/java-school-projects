@@ -1,21 +1,37 @@
+/* 
+ * BinaryPower Class
+ * Alex Nunes
+ * 17/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Determine the speed at which a program can convert
+ * decimal numbers to binary from 0 to 2^n
+ */
 import java.util.*;
 public class BinaryPower {
 	public static void main(String[] args) {
+		//Declare Variables and scanner
 		Scanner kbd = new Scanner(System.in);
 		int n;
 		String sb;
 		long startTime, endTime, executionTime;
 		
+		//Take in value of n
 		System.out.print("Enter the value of n:");
 		n = kbd.nextInt();
 		
+		//Determine the upper limit
 		int power = (int)Math.pow(2,n);
 		
+		//Record start time and convert all numbers to binary
 		startTime = System.currentTimeMillis();
-		for(int i =0; i<power;i++){
+		for(int i =0; i < power;i++){
 			sb = Integer.toBinaryString(i);
-			System.out.println(sb);
+			//System.out.println(sb);
 		}
+		
+		//Record end time, figure out the execution time then print
 		endTime = System.currentTimeMillis();
 		executionTime = endTime - startTime;
 		

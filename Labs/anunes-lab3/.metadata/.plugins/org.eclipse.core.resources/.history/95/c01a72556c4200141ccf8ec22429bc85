@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class StringMatch {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		
+	}
+
+}
