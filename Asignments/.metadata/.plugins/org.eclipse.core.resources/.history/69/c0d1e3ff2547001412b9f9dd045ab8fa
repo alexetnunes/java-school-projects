@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+
+public class FastFlexible extends FastPiece {
+
+	public FastFlexible() {
+		
+	}
+
+	public FastFlexible(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+	
+	@Override
+	public void move(String direction, int spaces) {
+		if(direction.toLowerCase().equals("left")){
+			if(this.getPosition()[0] - spaces >= 0){
+				this.getPosition()[0] = this.getPosition()[0] - spaces;
+			}
+		}else if(direction.toLowerCase().equals("right")){
+			if(this.getPosition()[0] + spaces >= 0){
+				this.getPosition()[0] = this.getPosition()[0] + spaces;
+			}
+		}else if(direction.toLowerCase().equals("up")){
+			if(this.getPosition()[1] - spaces >= 0){
+				this.getPosition()[1] = this.getPosition()[0] - spaces;
+			}
+		}else if(direction.toLowerCase().equals("down")){
+			if(this.getPosition()[1] + spaces >= 0){
+				this.getPosition()[1] = this.getPosition()[0] + spaces;
+			}
+		}else{
+			System.out.println("Invalid direction.");
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "FastFlexible [Name=" + getName() + ", Colour="
+				+ getColour() + ", Position="
+				+ Arrays.toString(getPosition()) +"]";
+	}
+}

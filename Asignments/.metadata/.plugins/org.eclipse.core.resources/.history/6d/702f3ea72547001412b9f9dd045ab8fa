@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+
+public class FastPiece extends Piece {
+
+	public FastPiece() {
+		
+	}
+
+	public FastPiece(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+	
+	public void move(String direction, int spaces) {
+		if(this.getPosition()[0] + direction >=0 || this.getPosition()[0] + direction <= 7){
+			this.getPosition()[0] = this.getPosition()[0] + direction;
+		}
+		
+		toString();
+	}
+
+	@Override
+	public String toString() {
+		return "FastPiece [Name=" + getName() + ", Colour="
+				+ getColour() + ", Position="
+				+ Arrays.toString(getPosition()) +"]";
+	}	
+}

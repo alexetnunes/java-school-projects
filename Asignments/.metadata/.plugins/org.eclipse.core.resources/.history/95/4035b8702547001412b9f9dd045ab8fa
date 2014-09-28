@@ -1,0 +1,46 @@
+import java.util.Arrays;
+
+
+public class SlowFlexible extends SlowPiece {
+
+	public SlowFlexible() {
+
+	}
+
+	public SlowFlexible(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+	
+	
+
+	public void move(String direction, int spaces) {
+		if(direction.toLowerCase().equals("left")){
+			if(this.getPosition()[0] - spaces >= 0){
+				this.getPosition()[0] = this.getPosition()[0] - spaces;
+			}
+		}else if(direction.toLowerCase().equals("right")){
+			if(this.getPosition()[0] + spaces >= 0){
+				this.getPosition()[0] = this.getPosition()[0] + spaces;
+			}
+		} else 	if(direction.toLowerCase().equals("up")){
+			if(this.getPosition()[1] - 1 >= 0){
+				this.getPosition()[1] = this.getPosition()[0] - 1;
+			}
+		}else if(direction.toLowerCase().equals("down")){
+			if(this.getPosition()[1] + 1 >= 0){
+				this.getPosition()[1] = this.getPosition()[0] + 1;
+			}
+		} else {
+			System.out.println("Invalid direction.");
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "SlowFlexible [Name=" + getName() + ", Colour="
+				+ getColour() + ", Position="
+				+ Arrays.toString(getPosition()) +"]";
+	}
+	
+
+}

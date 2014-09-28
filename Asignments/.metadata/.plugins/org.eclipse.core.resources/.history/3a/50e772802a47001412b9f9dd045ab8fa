@@ -1,0 +1,33 @@
+
+public class Board {
+	
+	private Piece[][] grid;
+	
+	public Board() {
+		grid = new Piece[8][8];
+	}
+	
+	public void addPiece(Piece p, int xpos, int ypos){
+		if(grid[xpos][ypos] == null){
+			grid[xpos][ypos] = p;
+		} else {
+			System.out.println("That position is not vacant.");
+		}
+	}
+	
+	public void move(int xpos, int ypos, String direction, int spaces){
+		if(grid[xpos][ypos] instanceof SlowPiece){
+			if(grid[xpos][ypos] instanceof SlowFlexible){
+				grid[xpos][ypos].move();
+			}else{
+				
+			}
+		} else if(grid[xpos][ypos] instanceof FastPiece){
+			if(grid[xpos][ypos] instanceof FastFlexible){
+				
+			}else{
+				
+			}
+		}
+	}
+}

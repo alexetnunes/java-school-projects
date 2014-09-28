@@ -1,0 +1,66 @@
+import java.util.*;
+public class PracticeMoves {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		int[] pos = new int[2], spaces;
+		String command, direction, primary, secondary, name, colour;
+		Piece p;
+		boolean gameover=false;
+		Board game = new Board();
+		
+		while(!gameover){
+			System.out.print("Please type a command: ");
+			command = kbd.next();
+			
+			if(command.toLowerCase().equals("create")){
+				System.out.print("Please enter starting position and piece type: ");
+				pos[0] = kbd.nextInt();
+				pos[1] = kbd.nextInt();
+				primary = kbd.next();
+				secondary = kbd.next();
+				
+				System.out.print("Please enter a colour and then a name: ");
+				colour = kbd.next();
+				name  = kbd.next();
+				
+				if(primary.equalsIgnoreCase("fast")){
+					if(secondary.equalsIgnoreCase("flexible")){
+						p = new FastFlexible(name, colour, pos);
+					}else {
+						p
+					}
+				}else{
+					if(secondary.equalsIgnoreCase("flexible")){
+						
+					}else {
+						
+					}
+				}
+				
+				
+			}else if(command.toLowerCase().equals("move")){
+				
+			}else if(command.toLowerCase().equals("print")){
+				game.displayBoard();
+			}else if(command.toLowerCase().equals("help")){
+				help();
+			}else if(command.toLowerCase().equals("exit")){
+				gameover = true;
+				System.out.println("Thanks for playing!");
+			}else{
+				System.out.println("Invalid command.");
+			}
+		}
+
+	}
+
+	public static void help(){
+		System.out.println("1. create [x-position, y-position, (fast), (flexible)]");
+		System.out.println("2. move [x-position, y-position, direction, spaces]");
+		System.out.println("3. print [print out the pieces positions]");
+		System.out.println("4. help [list commands]");
+		System.out.println("5. exit [exit the game]");
+		
+	}
+}

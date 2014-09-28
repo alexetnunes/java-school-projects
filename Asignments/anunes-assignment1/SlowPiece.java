@@ -1,8 +1,16 @@
+/* 
+ * SlowPiece Class
+ * Alex Nunes
+ * 28/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Slow piece class that can only move laft or right one space
+ */
 import java.util.Arrays;
-
-
 public class SlowPiece extends Piece {
 	
+	//Constructors
 	public SlowPiece() {
 		super();
 	}
@@ -10,19 +18,12 @@ public class SlowPiece extends Piece {
 	public SlowPiece(String name, String colour, int[] position) {
 		super(name, colour, position);
 	}
-
-	public void move(int direction) {
-		if(direction < 0){
-			if(this.getPosition()[0] - 1 >= 0){
-				this.getPosition()[0] = this.getPosition()[0] - 1;
-			}
-		}else{
-			if(this.getPosition()[0] + 1 <= 7){
-				this.getPosition()[0] = this.getPosition()[0] + 1;
-			}
-		}
-		
-		toString();
+	
+	// Limits the overridden method to moving one space
+	@Override
+	public boolean move(String direction, int spaces) {
+		spaces = 1;
+		return super.move(direction, spaces);
 	}
 
 	@Override

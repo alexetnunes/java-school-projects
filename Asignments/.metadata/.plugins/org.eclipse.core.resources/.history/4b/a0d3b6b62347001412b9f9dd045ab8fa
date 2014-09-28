@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+
+public class SlowFlexible extends SlowPiece {
+
+	public SlowFlexible() {
+
+	}
+
+	public SlowFlexible(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+
+
+	public void move(String direction, String updown) {
+		if(updown.equalsIgnoreCase("vertical")){
+			if(direction < 0){
+				if(this.getPosition()[1] - 1 >= 0){
+					this.getPosition()[1] = this.getPosition()[0] - 1;
+				}
+			}else{
+				if(this.getPosition()[1] + 1 <= 7){
+					this.getPosition()[1] = this.getPosition()[0] + 1;
+				}
+			}
+		}else if(updown.equalsIgnoreCase("horizontal")){
+			super.move(direction);
+		}else{
+			System.out.println("Please enter a negative or positive integer followed by 'vertical' or 'horizontal'.");
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "SlowFlexible [Name=" + getName() + ", Colour="
+				+ getColour() + ", Position="
+				+ Arrays.toString(getPosition()) +"]";
+	}
+	
+
+}

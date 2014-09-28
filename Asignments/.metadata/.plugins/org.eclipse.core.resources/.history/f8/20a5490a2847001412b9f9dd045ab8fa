@@ -1,0 +1,17 @@
+
+public class Board {
+	
+	private Piece[][] grid;
+	
+	public Board() {
+		grid = new Piece[8][8];
+	}
+	
+	public void addPiece(Piece p, int xpos, int ypos){
+		if(grid[xpos][ypos] == null){
+			grid[xpos][ypos] = p;
+		} else {
+			System.out.println("That position is not vacant.");
+		}
+	}	
+}

@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+
+public class SlowPiece extends Piece {
+	
+	public SlowPiece() {
+		super();
+	}
+
+	public SlowPiece(String name, String colour, int[] position) {
+		super(name, colour, position);
+	}
+	
+	@Override
+	public boolean move(String direction, int spaces) {
+		spaces = 1;
+		return super.move(direction, spaces);
+	}
+
+	@Override
+	public String toString() {
+		return "SlowPiece [Name=" + getName() + ", Colour="
+				+ getColour() + ", Position="
+				+ Arrays.toString(getPosition()) +"]";
+	}	
+}

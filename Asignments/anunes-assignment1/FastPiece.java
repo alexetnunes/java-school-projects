@@ -1,6 +1,14 @@
+/* 
+ * FastPiece Class
+ * Alex Nunes
+ * 28/09/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * A piece that can move left or right any
+ * number of spaces on a board
+ */
 import java.util.Arrays;
-
-
 public class FastPiece extends Piece {
 
 	public FastPiece() {
@@ -10,13 +18,9 @@ public class FastPiece extends Piece {
 	public FastPiece(String name, String colour, int[] position) {
 		super(name, colour, position);
 	}
-	
-	public void move(int direction) {
-		if(this.getPosition()[0] + direction >=0 || this.getPosition()[0] + direction <= 7){
-			this.getPosition()[0] = this.getPosition()[0] + direction;
-		}
-		
-		toString();
+	@Override
+	public boolean move(String direction, int spaces) {
+		return super.move(direction, spaces);
 	}
 
 	@Override
