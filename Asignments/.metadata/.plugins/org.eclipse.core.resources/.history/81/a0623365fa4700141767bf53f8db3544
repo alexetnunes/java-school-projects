@@ -86,7 +86,6 @@ public class PracticeMoves {
 				gameover = true;
 				System.out.println("Thanks for playing!");
 			}else{
-				// Error output on command
 				System.out.println("Invalid command.");
 			}
 		}

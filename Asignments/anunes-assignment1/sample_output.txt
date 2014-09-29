@@ -101,3 +101,23 @@ SlowPiece [Name=t, Colour=red, Position=[1, 1]]
 FastPiece [Name=b, Colour=blue, Position=[5, 2]]
 Please type a command: exit
 Thanks for playing!
+
+/**********************************/
+Please type a command: create
+Please enter starting position and piece type: 1 1 slow w
+Please enter a colour and then a name: red n
+SlowPiece [Name=n, Colour=red, Position=[1, 1]]
+Please type a command: create
+Please enter starting position and piece type: 2 2 slow m
+Please enter a colour and then a name: blue b
+SlowPiece [Name=b, Colour=blue, Position=[2, 2]]
+Please type a command: create
+Please enter starting position and piece type: 3 3 fast flexible
+Please enter a colour and then a name: green t
+FastFlexible [Name=t, Colour=green, Position=[3, 3]]
+Please type a command: print
+SlowPiece [Name=n, Colour=red, Position=[1, 1]]
+SlowPiece [Name=b, Colour=blue, Position=[2, 2]]
+FastFlexible [Name=t, Colour=green, Position=[3, 3]]
+Please type a command: exit
+Thanks for playing!

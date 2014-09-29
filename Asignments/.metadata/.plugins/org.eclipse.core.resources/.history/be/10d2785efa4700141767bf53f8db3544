@@ -82,11 +82,9 @@ public class PracticeMoves {
 				//Display commands
 				help();
 			}else if(command.toLowerCase().equals("exit")){
-				//End the practice moves
 				gameover = true;
 				System.out.println("Thanks for playing!");
 			}else{
-				// Error output on command
 				System.out.println("Invalid command.");
 			}
 		}
