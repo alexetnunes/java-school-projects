@@ -1,0 +1,19 @@
+import java.util.*;
+
+
+public class PrintQueueDemo {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		PrintQueue printJobs = new PrintQueue();
+		
+		printJobs.lpr("swilliams", 309);
+		printJobs.lpr("ronaldinho", 300);
+		printJobs.lpr("swilliams", 312);
+		printJobs.lpr("swilliams", 267);
+		printJobs.lpr("swilliams", 135);
+		printJobs.lpr("swilliams", 301);
+		
+	}
+
+}

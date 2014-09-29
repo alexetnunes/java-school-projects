@@ -1,0 +1,27 @@
+
+public class PrintQueue {
+	
+	private Queue<Jobs> jobs;
+
+	public PrintQueue() {
+		jobs = new Queue<Jobs>();
+	}
+	
+	public void lpr(String owner, int jobId){
+		jobs.enqueue(new Jobs(owner, jobId));
+	}
+	
+	public void lpq(){
+		
+	}
+	
+	public void lprm(int jobId){
+		
+	}
+	
+	public void lprmAll(String owner){
+		
+	}
+	
+	
+}

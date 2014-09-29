@@ -1,0 +1,21 @@
+Empty:true
+One Two Three Four Five
+One
+Two
+Three
+Four
+Five
+null
+One
+Two
+
+Size:5
+
+One Two Three Four
+One Two Four
+Size:3
+Empty:false
+Position of Three: -1
+Position of Four: 2
+Two Four
+Empty:true

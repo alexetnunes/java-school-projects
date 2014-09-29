@@ -1,0 +1,35 @@
+
+public class PrintQueue {
+	
+	private Queue<Jobs> jobs;
+
+	public PrintQueue() {
+		jobs = new Queue<Jobs>();
+	}
+	
+	public void lpr(String owner, int jobId){
+		jobs.enqueue(new Jobs(owner, jobId));
+	}
+	
+	public void lpq(){
+		if(!jobs.isEmpty()){
+			
+		}else{
+			System.out.println("There are no jobs in the queue.");
+		}
+	}
+	
+	public void lprm(int jobId){
+		if(jobId == jobs.first().getJobId()){
+			jobs.dequeue(jobs.first());
+		}else{
+			System.out.println("System Error. Job IDs do not match.");
+		}
+	}
+	
+	public void lprmAll(String owner){
+		
+	}
+	
+	
+}

@@ -1,0 +1,11 @@
+import java.util.*;
+
+
+public class PrintQueueDemo {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+
+	}
+
+}

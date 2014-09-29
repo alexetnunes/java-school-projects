@@ -49,7 +49,7 @@ public class LinkedList<T>
 	
 		while (curr!=null)
 		{
-			System.out.println(curr.getData());
+			System.out.print(curr.getData()+" ");
 			curr = curr.getNext();
 		}
 		
@@ -61,7 +61,7 @@ public class LinkedList<T>
 		Node<T> curr = front;
 		if (index<0||index>=count)
 		{
-			System.out.println("Error. Index out of bounds");
+			//System.out.println("Error. Index out of bounds");
 			return null;
 		}
 		else

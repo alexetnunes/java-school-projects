@@ -1,0 +1,11 @@
+
+public class PrintQueue {
+	
+	private Queue<T> jobs;
+
+	public PrintQueue() {
+		jobs = new Queue<T>
+	}
+	
+	
+}

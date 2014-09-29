@@ -1,0 +1,23 @@
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		Queue<String> que = new Queue<String>();
+		
+		que.enqueue("One");
+		que.enqueue("Two");
+		que.enqueue("Three");
+		que.enqueue("Four");
+		que.enqueue("Five");
+		que.print();
+		
+		System.out.println();
+		que.remove("Five");
+		que.print();
+		que.dequeue("Three");
+		System.out.println();
+		que.print();
+
+	}
+
+}

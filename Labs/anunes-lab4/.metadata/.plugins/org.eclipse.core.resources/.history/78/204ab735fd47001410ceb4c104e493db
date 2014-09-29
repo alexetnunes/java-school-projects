@@ -1,0 +1,35 @@
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		Queue<String> que = new Queue<String>();
+		
+		System.out.println("Empty:" + que.isEmpty());
+		que.enqueue("One");
+		que.enqueue("Two");
+		que.enqueue("Three");
+		que.enqueue("Four");
+		que.enqueue("Five");
+		que.print();
+		
+		System.out.println();
+		System.out.println(que.first());
+		System.out.println(que.next);
+		
+		System.out.println("\nSize:" + que.size());
+		
+		System.out.println();
+		que.remove("Five");
+		que.print();
+		
+		System.out.println();
+		que.dequeue("Three");
+		que.print();
+		System.out.println("\nSize:" + que.size());
+		System.out.println("Empty:" + que.isEmpty());
+		
+		
+
+	}
+
+}
