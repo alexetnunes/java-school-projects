@@ -1,0 +1,6 @@
+
+public class Queue<t> {
+
+	private LinkedList<T> queue;
+	
+}

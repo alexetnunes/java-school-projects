@@ -60,11 +60,12 @@ public class Piece {
 				success = true;
 			}
 		}else if(direction.toLowerCase().equals("right")){
-			if(this.getPosition()[0] + spaces >= 0){
+			if(this.getPosition()[0] + spaces <= 7){
 				this.getPosition()[0] = this.getPosition()[0] + spaces;
 				success = true;
 			}
-		}else{
+		}
+		if(!success){
 			System.out.println("Invalid move.");
 		}
 		return success;

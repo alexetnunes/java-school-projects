@@ -1,0 +1,21 @@
+
+public class Queue<T> {
+
+	private LinkedList<T> queue;
+	private int cursor;
+	
+	public Queue() {
+		queue = new LinkedList<T>();
+		cursor = -1;
+	}
+	
+	public void enqueue(T item){
+		queue.addToEnd(item);
+	}
+	
+	public void dequeue(T item){
+		
+	}
+	
+	
+}

@@ -212,6 +212,22 @@ public class LinkedList<T>
 		}
 	}
 	
+	//Add a node to the end
+	public void addToEnd(T item){
+		Node<T> newNode = new Node<T>(item,null);
+		if(isEmpty()){
+			front = newNode;
+		}else{
+			Node<T> curr=front;
+			while(curr.getNext()!=null){
+				curr=curr.getNext();
+			}
+			curr.setNext(newNode);
+		}
+		count++;
+	}
+		
+	
 		
 		
 }

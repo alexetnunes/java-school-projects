@@ -1,0 +1,103 @@
+
+Please type a command: help
+1. create [x-position, y-position, (fast), (flexible)]
+2. move [x-position, y-position, direction, spaces]
+3. print [print out the pieces positions]
+4. help [list commands]
+5. exit [exit the game]
+Please type a command: create
+Please enter starting position and piece type: 4 5 slow flexible
+Please enter a colour and then a name: blue jack
+SlowFlexible [Name=jack, Colour=blue, Position=[4, 5]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+4 5 up 1
+Please type a command: print
+SlowFlexible [Name=jack, Colour=blue, Position=[4, 6]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+4 6 right 5
+Please type a command: print
+SlowFlexible [Name=jack, Colour=blue, Position=[5, 6]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+5 6 left 1
+Please type a command: print
+SlowFlexible [Name=jack, Colour=blue, Position=[4, 6]]
+Please type a command: move 4 6 right 1
+Please enter the position of the piece to move, a direction, and the number of spaces:
+Please type a command: print
+SlowFlexible [Name=jack, Colour=blue, Position=[5, 6]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+5 6 down 1
+Please type a command: print
+SlowFlexible [Name=jack, Colour=blue, Position=[5, 5]]
+Please type a command: lkj
+Invalid command.
+Please type a command: exit
+Thanks for playing!
+
+
+/**********************************/
+Please type a command: create
+Please enter starting position and piece type: 6 7 fast flexible
+Please enter a colour and then a name: pink dan
+FastFlexible [Name=dan, Colour=pink, Position=[6, 7]]
+Please type a command: create
+Please enter starting position and piece type: 1 1 slow w
+Please enter a colour and then a name: green tim
+SlowPiece [Name=tim, Colour=green, Position=[1, 1]]
+Please type a command: print
+SlowPiece [Name=tim, Colour=green, Position=[1, 1]]
+FastFlexible [Name=dan, Colour=pink, Position=[6, 7]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+6 7 up 7
+Invalid move.
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+6 7 down 7
+Please type a command: print
+SlowPiece [Name=tim, Colour=green, Position=[1, 1]]
+FastFlexible [Name=dan, Colour=pink, Position=[6, 0]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+1 1 up 1
+Invalid move.
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces:
+1 1 left 1
+Please type a command: print
+SlowPiece [Name=tim, Colour=green, Position=[0, 1]]
+FastFlexible [Name=dan, Colour=pink, Position=[6, 0]]
+Please type a command: exit
+Thanks for playing!
+
+
+/**********************************/
+Please type a command: create
+Please enter starting position and piece type: 1 1 slow l
+Please enter a colour and then a name: red t
+SlowPiece [Name=t, Colour=red, Position=[1, 1]]
+Please type a command: create
+Please enter starting position and piece type: 1 1 slow h
+Please enter a colour and then a name: blue b
+That position is not vacant.
+Please type a command: create
+Please enter starting position and piece type: 1 2 fast m
+Please enter a colour and then a name: blue b
+FastPiece [Name=b, Colour=blue, Position=[1, 2]]
+Please type a command: print
+SlowPiece [Name=t, Colour=red, Position=[1, 1]]
+FastPiece [Name=b, Colour=blue, Position=[1, 2]]
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces: 1 2 left 4
+Invalid move.
+Please type a command: move
+Please enter the position of the piece to move, a direction, and the number of spaces: 1 2 right 4
+Please type a command: print
+SlowPiece [Name=t, Colour=red, Position=[1, 1]]
+FastPiece [Name=b, Colour=blue, Position=[5, 2]]
+Please type a command: exit
+Thanks for playing!

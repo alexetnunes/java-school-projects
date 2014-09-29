@@ -12,19 +12,25 @@ import java.util.*;
 public class PracticeMoves {
 
 	public static void main(String[] args) {
+		
+		//Declare Scanner and variables
 		Scanner kbd = new Scanner(System.in);
 		int spaces;
 		String command, direction, primary, secondary, name, colour;
 		boolean gameover=false;
 		Board game = new Board();
-
+		
+		//Prompt user for commands while game has not been exited
 		while(!gameover){
+			//Declare position and piece variables
 			int[] pos = new int[2];
 			Piece p;
-
+			
+			//Prompt user for command
 			System.out.print("Please type a command: ");
 			command = kbd.next();
-
+			
+			//Determine course of action base on command entered
 			if(command.toLowerCase().equals("create")){
 				System.out.print("Please enter starting position and piece type: ");
 				pos[0] = kbd.nextInt();
@@ -54,7 +60,7 @@ public class PracticeMoves {
 
 
 			}else if(command.toLowerCase().equals("move")){
-				System.out.println("Please enter the position of the piece to move, a direction, and the number of spaces: ");
+				System.out.print("Please enter the position of the piece to move, a direction, and the number of spaces: ");
 				pos[0] = kbd.nextInt();
 				pos[1] = kbd.nextInt();
 				direction = kbd.next();

@@ -30,7 +30,7 @@ public class SlowFlexible extends SlowPiece {
 				success = true;
 			}
 		}else if(direction.toLowerCase().equals("right")){
-			if(this.getPosition()[0] + spaces >= 0){
+			if(this.getPosition()[0] + spaces <= 7){
 				this.getPosition()[0] = this.getPosition()[0] + spaces;
 				success = true;
 			}
@@ -40,11 +40,12 @@ public class SlowFlexible extends SlowPiece {
 				success = true;
 			}
 		}else if(direction.toLowerCase().equals("up")){
-			if(this.getPosition()[1] + spaces >= 0){
+			if(this.getPosition()[1] + spaces <= 7){
 				this.getPosition()[1] = this.getPosition()[1] + spaces;
 				success = true;
 			}
-		}else{
+		}
+		if(!success){
 			System.out.println("Invalid move.");
 		}
 		return success;

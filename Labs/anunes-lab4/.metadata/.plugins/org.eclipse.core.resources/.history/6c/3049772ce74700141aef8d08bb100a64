@@ -1,0 +1,15 @@
+
+public class Queue<T> {
+
+	private LinkedList<T> queue;
+	private int cursor;
+	
+	public Queue(LinkedList<T> queue, int cursor) {
+		this.queue = queue;
+		this.cursor = cursor;
+	}
+	
+	
+	
+	
+}
