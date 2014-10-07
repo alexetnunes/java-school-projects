@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+public class StringTokenizerDemo {
+	public static void main(String[] args) throws IOException {
+		
+		Scanner kbd = new Scanner(System.in);
+		System.out.print("Enter the filename to read from: ");
+		ArrayList<String> words = new ArrayList<String>();
+		String filename = kbd.nextLine();
+		File file = new File(filename);
+		Scanner inputFile = new Scanner(file);
+		String line, word;
+		StringTokenizer token;
+		int lineCount = 0, characterCount=0;
+		
+		while (inputFile.hasNext())
+		{
+			line = inputFile.nextLine();
+			token = new StringTokenizer(line, " ");
+				while (token.hasMoreTokens())
+				{
+					word = token.nextToken();
+					characterCount += word.length();
+					words.add(word);
+				}
+			lineCount++;
+		}
+		inputFile.close();
+		
+		System.out.println("The number of characters (no spaces) in the file is: " + characterCount);
+		System.out.println("The number of words in the file is: " + characterCount);
+		System.out.println("The number of lines in the file is: " + characterCount);
+
+
+	}
+}

@@ -1,0 +1,12 @@
+
+public class StudentLotteryDemo {
+
+	public static void main(String[] args) {
+		
+		System.out.println(1%2);
+		StudentLottery lottery= new StudentLottery();
+		lottery.addStudents();
+		lottery.pickWinner();
+	}
+
+}

@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class StudentLottery {
+	
+	private ArrayList<Student> students;
+
+	public StudentLottery() {
+		this.students = new ArrayList<Student>();
+	}
+	
+	public void addStudents(){
+		Scanner kbd = new Scanner(System.in);
+		char enter='y';
+		
+		while(enter != 'n'){
+			System.out.print("Enter? (y or n):");
+			enter = kbd.next().charAt(0);
+			
+			if(enter == 'y'){
+				String name;
+				int id;
+				Student student;
+				
+				System.out.print("Name: ");
+				name = kbd.next();
+				
+				System.out.print("ID: ");
+				id = kbd.nextInt();
+				
+				student = new Student(name, id);
+				
+				if(students.contains(student)){
+					System.out.println("Sorry. You cannot enter twice!");
+				} else {
+					students.add(student);
+				}
+			}else if(enter == 'n'){
+				System.out.println("Thank you.\n");
+			}else{
+				System.out.println("Invalid command.");
+			}
+		}
+	}
+	
+	public void pickWinner(){
+		Random random= new Random();
+		return ("And the winner is: " + students.get(random.nextInt(students.size())));
+	}
+}

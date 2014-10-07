@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class StudentLottery {
+	
+	private ArrayList<Student> students;
+
+	public StudentLottery() {
+		this.students = new ArrayList<Student>();
+	}
+	
+	public void addStudents(){
+		Scanner kbd = new Scanner(System.in);
+		char enter='y';
+		
+		while(enter != 'n'){
+			System.out.print("Enter? (y or n)");
+			enter = kbd.next().charAt(0);
+			
+			if(enter == 'y'){
+				String name;
+				int id;
+				Student student;
+				
+				System.out.print("Name:");
+				name = kbd
+			}
+		}
+	}
+	
+	public Student pickWinner(){
+		
+	}
+}
