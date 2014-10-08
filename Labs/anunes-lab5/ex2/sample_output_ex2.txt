@@ -1,0 +1,7 @@
+Enter the filename to read from: names.txt
+[Shai]
+[Ralph, Shai]
+[Hillary, Ralph, Shai]
+[Hillary, Ralph, Shai, Tom]
+[Barbara, Hillary, Ralph, Shai, Tom]
+[Barbara, Fred, Hillary, Ralph, Shai, Tom]

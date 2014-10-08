@@ -1,0 +1,39 @@
+Enter? (y or n): y
+Name: Bob B
+ID: 87687
+Enter? (y or n): y
+Name: Johnny Doe
+ID: 98743
+Enter? (y or n): y
+Name: Jane Done
+ID: 24343
+Enter? (y or n): y
+Name: Carl C
+ID: 23443
+Enter? (y or n): n
+Thank you.
+
+And the winner is: Johnny Doe, ID 98743
+
+
+
+
+Enter? (y or n): y
+Name: Peter Parker
+ID: 02099
+Enter? (y or n): y
+Name: Peter Parker
+ID: 02099
+Sorry. You cannot enter twice!
+Enter? (y or n): m
+Invalid command.
+Enter? (y or n): y
+Name: Carol Danvers
+ID: 20894
+Enter? (y or n): y
+Name: Sam Wilson
+ID: 13123
+Enter? (y or n): n
+Thank you.
+
+And the winner is: Peter Parker, ID 2099

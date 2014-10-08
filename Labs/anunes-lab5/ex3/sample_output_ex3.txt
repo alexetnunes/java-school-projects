@@ -1,0 +1,4 @@
+Enter the filename to read from: Pokemon.txt
+The number of characters (no spaces) in the file is: 454
+The number of words in the file is: 99
+The number of lines in the file is: 10
