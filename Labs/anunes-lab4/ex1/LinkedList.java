@@ -3,7 +3,7 @@ public class LinkedList<T>
 	//attributes
 	private Node<T> front;
 	private int count;
-	
+
 	//constructor
 	public LinkedList()
 	{
@@ -14,7 +14,7 @@ public class LinkedList<T>
 	{
 		return front;
 	}
-	
+
 	//adds an item to the front of the linked list
 	public void add(T item)
 	{
@@ -22,39 +22,39 @@ public class LinkedList<T>
 		front = newNode;
 		count++;
 	}
-	
+
 	//returns the current size of the linked list
 	public int size()
 	{
 		return count;
 	}
-	
+
 	//clears the linked list
 	public void clear()
 	{
 		front = null;
 		count=0;
 	}
-	
+
 	//returns true if the linked list is empty
 	public boolean isEmpty()
 	{
 		return (count==0);
 	}
-	
+
 	//scans the linked list and prints the data
 	public void enumerate()
 	{
 		Node<T> curr = front;
-	
+
 		while (curr!=null)
 		{
 			System.out.print(curr.getData()+" ");
 			curr = curr.getNext();
 		}
-		
+
 	}
-	
+
 	//returns the data at a given index
 	public T getAt(int index)
 	{
@@ -66,14 +66,14 @@ public class LinkedList<T>
 		}
 		else
 		{
-			
+
 			for(int i=0; i<index; i++)
 				curr = curr.getNext();
 			return curr.getData();
-		}			
+		}
 
 	}
-	
+
 	//inserts an item at a given index
 	public void insertAt(T item, int index)
 	{
@@ -97,7 +97,7 @@ public class LinkedList<T>
 			count++;
 		}
 	}
-	
+
 	//sets the data at a node at a given index
 	public void setAt(T item, int index)
 	{
@@ -114,7 +114,7 @@ public class LinkedList<T>
 			curr.setData(item);
 		}
 	}
-	
+
 	//returns the index of the first occurrence of a given item, -1 if not found
 	public int indexOf(T item)
 	{
@@ -127,7 +127,7 @@ public class LinkedList<T>
 		}
 		return -1;
 	}
-	
+
 	//removes the node at a given index
 	public T removeAt(int index)
 	{
@@ -139,7 +139,7 @@ public class LinkedList<T>
 		}
 		else
 		{
-			
+
 			if (index==0)
 			{
 				result = front.getData();
@@ -152,13 +152,13 @@ public class LinkedList<T>
 					prev = prev.getNext();
 				result=prev.getNext().getData();
 				prev.setNext(prev.getNext().getNext());
-					
+
 			}
 			count--;
 		}
 		return result;
 	}
-	
+
 	//removes the node containing the first occurrence of a given item
 	public void remove (T item)
 	{
@@ -171,14 +171,14 @@ public class LinkedList<T>
 		else
 			removeAt(i);
 	}
-	
+
 	//Removes all nodes containing a given item
 	//Does it in one scan (O(n))
 	public void removeAll(T item)
 	{
-		
+
 		Node<T> curr=front, prev=null;
-		
+
 		while (curr!=null)
 		{
 			if (front.getData().equals(item))
@@ -211,7 +211,7 @@ public class LinkedList<T>
 			}
 		}
 	}
-	
+
 	//Add a node to the end
 	public void addToEnd(T item){
 		Node<T> newNode = new Node<T>(item,null);
@@ -226,8 +226,5 @@ public class LinkedList<T>
 		}
 		count++;
 	}
-		
-	
-		
-		
+
 }
