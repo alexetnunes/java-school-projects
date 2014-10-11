@@ -1,0 +1,16 @@
+
+public class NHLList {
+	private List<PlayerRecord> players;
+	
+	public NHLList(){
+		players = new List<PlayerRecord>();
+	}
+	
+	public String highestPoints(){
+		return null;
+	}
+	
+	public String mostPenalties(){
+		return null;
+	}
+}
