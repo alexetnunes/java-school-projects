@@ -44,9 +44,9 @@ public class NHLListDemo {
 		}
 		inputFile.close();
 		
-		String output = String.format("\n%-16s%-10s%8s%8s%8s%8s%8s%8s%8s%8s%8s%8s", "Name", "Position", "Team", "GP", "G", "A", "PIM", "SOG", "GWG", "P", "P/G", "PCT");
+		/*String output = String.format("\n%-16s%-10s%8s%8s%8s%8s%8s%8s%8s%8s%8s%8s", "Name", "Position", "Team", "GP", "G", "A", "PIM", "SOG", "GWG", "P", "P/G", "PCT");
 		System.out.println(output);
-		nhlStats.enumerate();
+		nhlStats.enumerate();*/
 		
 		System.out.println();
 		System.out.println("\nPlayers with highest points and their teams:");
@@ -57,8 +57,5 @@ public class NHLListDemo {
 		
 		System.out.println("\nMost valuable players and their teams:");
 		nhlStats.mvp();
-		
-		System.out.println("\nMost promising players and their teams:");
-		nhlStats.mostPromising();
 	}
 }

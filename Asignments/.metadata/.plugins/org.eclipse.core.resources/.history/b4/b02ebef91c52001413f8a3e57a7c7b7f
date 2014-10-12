@@ -92,26 +92,8 @@ public class NHLList {
 		}
 	}
 	
-	public void mostPromising(){
-		ArrayList<PlayerRecord> mostPromisingPlayers = new ArrayList<PlayerRecord>();
-		PlayerRecord mostPromising = players.first();
-		PlayerRecord curr = players.next();
-		
-		while(curr != null){
-			if(curr.getShotsOnGoal() > mostPromising.getShotsOnGoal()){
-				mostPromisingPlayers.clear();
-				mostPromising = curr;
-				mostPromisingPlayers.add(mostPromising);
-			}else if(curr.getShotsOnGoal() == mostPromising.getShotsOnGoal()){
-				mostPromising = curr;
-				mostPromisingPlayers.add(mostPromising);
-			}
-			curr = players.next();
-		}
-		
-		for(int i=0; i<mostPromisingPlayers.size(); i++){
-			System.out.println(mostPromisingPlayers.get(i).getName()+" - "+ mostPromisingPlayers.get(i).getTeam());
-		}
+	public String mostPromising(){
+		return null;
 	}
 
 }

@@ -98,13 +98,13 @@ public class NHLList {
 		PlayerRecord curr = players.next();
 		
 		while(curr != null){
-			if(curr.getShotsOnGoal() > mostPromising.getShotsOnGoal()){
+			if(curr.getGameWinners() > mvp.getGameWinners()){
 				mostPromisingPlayers.clear();
-				mostPromising = curr;
-				mostPromisingPlayers.add(mostPromising);
-			}else if(curr.getShotsOnGoal() == mostPromising.getShotsOnGoal()){
-				mostPromising = curr;
-				mostPromisingPlayers.add(mostPromising);
+				mvp = curr;
+				mostPromisingPlayers.add(mvp);
+			}else if(curr.getGameWinners() == mvp.getGameWinners()){
+				mvp = curr;
+				mostPromisingPlayers.add(mvp);
 			}
 			curr = players.next();
 		}
