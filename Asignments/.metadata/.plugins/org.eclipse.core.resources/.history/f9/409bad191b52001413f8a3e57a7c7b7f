@@ -51,11 +51,9 @@ public class NHLListDemo {
 		System.out.println();
 		System.out.println("\nPlayers with highest points and their teams:");
 		nhlStats.highestPoints();
-
+		
+		System.out.println();
 		System.out.println("\nMost aggressive players, their teams and their positions:");
 		nhlStats.mostPenalties();
-		
-		System.out.println("\nMost valuable players and their teams:");
-		nhlStats.mvp();
 	}
 }

@@ -55,7 +55,7 @@ public class NHLListDemo {
 		System.out.println("\nMost aggressive players, their teams and their positions:");
 		nhlStats.mostPenalties();
 		
-		System.out.println("\nMost valuable players and their teams:");
+		System.out.println("\nMost aggressive players, their teams and their positions:");
 		nhlStats.mvp();
 	}
 }
