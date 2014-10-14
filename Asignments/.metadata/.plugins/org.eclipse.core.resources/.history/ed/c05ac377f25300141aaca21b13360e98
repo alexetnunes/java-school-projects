@@ -1,0 +1,4 @@
+
+public class TeamRecord {
+	private String name;
+}

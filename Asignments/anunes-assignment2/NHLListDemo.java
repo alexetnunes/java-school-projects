@@ -4,7 +4,9 @@ public class NHLListDemo {
 	public static void main(String[] args) throws IOException {
 		//Declare scanner
 		Scanner kbd = new Scanner(System.in);
-
+		ArrayList<TeamRecord> teams = new ArrayList<TeamRecord>();
+		
+		
 		//take in file
 		System.out.print("Enter the filename to read from: ");
 		String filename = kbd.nextLine();
@@ -60,5 +62,16 @@ public class NHLListDemo {
 		
 		System.out.println("\nMost promising players and their teams:");
 		nhlStats.mostPromising();
+		
+		System.out.println("\nTeams that had the most number of penalty minutes:");
+		nhlStats.mostAggressiveTeams();
+		
+		System.out.println("\nTeams that had the most number of game winning goals:");
+		nhlStats.mostGWGTeams();
+		
+		System.out.println("\nTeams that had the least number of game winning goals:");
+		nhlStats.leastGWGTeams();
+		
+		nhlStats.teamsEnumerate();
 	}
 }

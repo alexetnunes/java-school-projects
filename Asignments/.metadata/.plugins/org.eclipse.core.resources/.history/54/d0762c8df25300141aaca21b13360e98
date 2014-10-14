@@ -1,0 +1,13 @@
+
+public class TeamRecord {
+	private String name;
+	private int penaltyMinutes, gameWinners;
+	public TeamRecord(String name) {
+		super();
+		this.name = name;
+		this.penaltyMinutes = penaltyMinutes;
+		this.gameWinners = gameWinners;
+	}
+	
+	
+}

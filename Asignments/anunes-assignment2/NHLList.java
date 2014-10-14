@@ -1,13 +1,29 @@
 import java.util.*;
 public class NHLList {
 	private List<PlayerRecord> players;
+	private List<TeamRecord> teams;
 	
 	public NHLList(){
 		players = new List<PlayerRecord>();
+		teams = new List<TeamRecord>();
 	}
 	
 	public void addPlayer(PlayerRecord item){
 		players.add(item);
+		
+		TeamRecord team = new TeamRecord(item.getTeam());
+		if(teams.contains(team) < 0){
+			teams.add(team);
+		}
+		
+		TeamRecord curr = teams.first();
+		while(curr != null){
+			if(team.equals(curr)){
+				curr.addPIM(item.getPenaltyMinutes());
+				curr.addGWG(item.getGameWinners());
+			}
+			curr = teams.next();
+		}
 	}
 	
 	public boolean isEmpty(){
@@ -111,6 +127,76 @@ public class NHLList {
 		
 		for(int i=0; i<mostPromisingPlayers.size(); i++){
 			System.out.println(mostPromisingPlayers.get(i).getName()+" - "+ mostPromisingPlayers.get(i).getTeam());
+		}
+	}
+	
+	public void mostAggressiveTeams(){
+		ArrayList<TeamRecord> highPIM = new ArrayList<TeamRecord>();
+		TeamRecord highestPIM = teams.first();
+		TeamRecord curr = teams.next();
+		
+		while(curr != null){
+			if(curr.getPenaltyMinutes() > highestPIM.getPenaltyMinutes()){
+				highPIM.clear();
+				highestPIM = curr;
+				highPIM.add(highestPIM);
+			}else if(curr.getPenaltyMinutes() == highestPIM.getPenaltyMinutes()){
+				highestPIM = curr;
+				highPIM.add(highestPIM);
+			}
+			curr = teams.next();
+		}
+		
+		for(int i=0; i<highPIM.size(); i++){
+			System.out.println(highPIM.get(i).getName());
+		}
+	}
+	
+	public void teamsEnumerate(){
+		teams.enumerate();
+	}
+	
+	public void mostGWGTeams(){
+		ArrayList<TeamRecord> highGWG = new ArrayList<TeamRecord>();
+		TeamRecord highestGWG = teams.first();
+		TeamRecord curr = teams.next();
+		
+		while(curr != null){
+			if(curr.getGameWinners() > highestGWG.getGameWinners()){
+				highGWG.clear();
+				highestGWG = curr;
+				highGWG.add(highestGWG);
+			}else if(curr.getGameWinners() == highestGWG.getGameWinners()){
+				highestGWG = curr;
+				highGWG.add(highestGWG);
+			}
+			curr = teams.next();
+		}
+		
+		for(int i=0; i<highGWG.size(); i++){
+			System.out.println(highGWG.get(i).getName());
+		}
+	}
+	
+	public void leastGWGTeams(){
+		ArrayList<TeamRecord> lowGWG = new ArrayList<TeamRecord>();
+		TeamRecord lowestGWG = teams.first();
+		TeamRecord curr = teams.next();
+		
+		while(curr != null){
+			if(curr.getGameWinners() < lowestGWG.getGameWinners()){
+				lowGWG.clear();
+				lowestGWG = curr;
+				lowGWG.add(lowestGWG);
+			}else if(curr.getGameWinners() == lowestGWG.getGameWinners()){
+				lowestGWG = curr;
+				lowGWG.add(lowestGWG);
+			}
+			curr = teams.next();
+		}
+		
+		for(int i=0; i<lowGWG.size(); i++){
+			System.out.println(lowGWG.get(i).getName());
 		}
 	}
 

@@ -1,0 +1,5 @@
+
+public class TeamRecord {
+	private String name;
+	private int penaltyMinutes, gameWinners;
+}

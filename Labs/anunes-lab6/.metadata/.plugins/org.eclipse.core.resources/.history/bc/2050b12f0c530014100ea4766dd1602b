@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.io.*;
+
+public class OrderedListUtility
+{
+	//Method 1
+	public static <T extends Comparable<T>> OrderedList<T> merge(OrderedList<T> first, OrderedList<T> second){
+		OrderedList<T> newList = new OrderedList<T>();
+		T list1Item = first.first(), list2Item = second.first();
+		while(list1Item != null || list2Item != null){
+			if(list1Item.compareTo(list2Item) < 0){
+				newList.insert(list1Item);
+				list1Item = first.next();
+			} else if(list1Item.compareTo(list2Item) > 0){
+				newList.insert(list2Item);
+				list2Item = second.next();
+			}else{
+				newList.insert(list1Item);
+				list1Item = first.next();
+				list2Item = second.next();
+			}
+		}
+		
+		if(list1Item == null)
+		return newList;
+	}
+	
+	//Method 2
+	public static <T extends Comparable<T>> OrderedList<T> findIntersection (OrderedList<T> first, OrderedList<T> second){
+		OrderedList<T> newList = new OrderedList<T>();
+		return newList;
+	}
+	
+	//Method 3
+	public static <T extends Comparable<T>> OrderedList<T> findDifference(OrderedList<T> first, OrderedList<T> second){
+		OrderedList<T> newList = new OrderedList<T>();
+		return newList;
+	}
+}
