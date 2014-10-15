@@ -1,7 +1,14 @@
-import java.io.PrintStream;
+/*
+* PlayerRecord Class
+* Alex Nunes
+* 14/10/2014
+* Dalhousie University
+* Faculty of Computer Science
+*
+* A Player Record class to keep track of a player's
+* stats 
+*/
 import java.text.DecimalFormat;
-
-
 public class PlayerRecord {
 	//Declare variables
 	private String name;
@@ -10,6 +17,7 @@ public class PlayerRecord {
 	private int gamesPlayed, goals, assists, penaltyMinutes, shotsOnGoal, gameWinners, points;
 	private double ppg, pct;
 	
+	//Constructors
 	public PlayerRecord(){
 		
 	}
@@ -130,21 +138,23 @@ public class PlayerRecord {
 		calcPct();
 	}
 
+	//Calculates and sets total points
 	public int calcPoints(){
 		points = goals + assists;
 		return points;
 	}
 	
+	//Calculates and sets total points per game
 	public double calcPpg(){
 		ppg = (double) calcPoints()/gamesPlayed;
 		return ppg;
 	}
 	
+	//Calculates and sets total shooting percentage
 	public double calcPct(){
 		pct = (double) goals*100.00/shotsOnGoal;
 		return pct;
 	}
-	
 	
 
 	@Override
@@ -152,11 +162,6 @@ public class PlayerRecord {
 		DecimalFormat df = new DecimalFormat("00.00");
 		String output = String.format("\n%-16s%-10s%8s%8s%8s%8s%8s%8s%8s%8s%8s%8s", name, position, team,gamesPlayed, goals, assists, penaltyMinutes, shotsOnGoal, gameWinners,getPoints(), df.format(getPpg()), df.format(getPct()));
 		return output;
-	}
-	
-	public static void main(String[] args) {
-		PlayerRecord p = new PlayerRecord("Wade Redden", "LD", "OTT",45,18,18,27,91,5);
-		System.out.println(p);
 	}
 	
 }

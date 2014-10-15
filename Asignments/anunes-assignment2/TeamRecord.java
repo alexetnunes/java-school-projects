@@ -1,7 +1,22 @@
-
+/*
+* TeamRecord Class
+* Alex Nunes
+* 14/10/2014
+* Dalhousie University
+* Faculty of Computer Science
+*
+* TeamRecord to keep track of a teams
+* Penalty Minutes and Game Winning Goals
+*/
 public class TeamRecord {
+	//Variables
 	private String name;
 	private int penaltyMinutes, gameWinners;
+	
+	//Constructors
+	public TeamRecord(){
+		
+	}
 	
 	public TeamRecord(String name) {
 		this.name = name;
@@ -39,10 +54,12 @@ public class TeamRecord {
 		this.gameWinners = gameWinners;
 	}
 
+	//Add Penalty Minutes to the current value
 	public void addPIM(int pim){
 		penaltyMinutes += pim;
 	}
 	
+	//Add Game Winning Goals to the current value
 	public void addGWG(int gwg){
 		gameWinners += gwg;
 	}

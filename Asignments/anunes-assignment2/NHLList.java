@@ -1,13 +1,28 @@
+/*
+* NHLList Class
+* Alex Nunes
+* 14/10/2014
+* Dalhousie University
+* Faculty of Computer Science
+*
+* This class implements a List of players and
+* a List of teams to track and run minor analysis
+*/
 import java.util.*;
 public class NHLList {
 	private List<PlayerRecord> players;
 	private List<TeamRecord> teams;
 	
+	//Constructor
 	public NHLList(){
 		players = new List<PlayerRecord>();
 		teams = new List<TeamRecord>();
 	}
 	
+	/* Adds a player to the Players list and
+	 * adds a team if necessary. Then adds the players
+	 * stats to the corresponding team
+	 */
 	public void addPlayer(PlayerRecord item){
 		players.add(item);
 		
@@ -26,22 +41,40 @@ public class NHLList {
 		}
 	}
 	
+	// checks if players is empty
 	public boolean isEmpty(){
 		return players.isEmpty();
 	}
 	
+	//Gets first player
 	public PlayerRecord first(){
 		return players.first();
 	}
 	
+	//Gets next player dependent on cursor
 	public PlayerRecord next(){
 		return players.next();
 	}
 	
+	//Print Players
 	public void enumerate(){
 		players.enumerate();
 	}
 	
+	//Print Teams
+	public void teamsEnumerate(){
+		teams.enumerate();
+	}
+	
+	//Get size of players
+	public int size(){
+		return players.size();
+	}
+	
+	/* Iterates through the players list to determine 
+	 * the player with the highest number of points
+	 * then prints out their name and team 
+	 */
 	public void highestPoints(){
 		ArrayList<PlayerRecord> highPointPlayers = new ArrayList<PlayerRecord>();
 		PlayerRecord highestPoints = players.first();
@@ -64,6 +97,10 @@ public class NHLList {
 		}
 	}
 	
+	/* Iterates through the players list to determine 
+	 * the player with the highest number of penalty
+	 * minutes then prints out their name, team, and position 
+	 */
 	public void mostPenalties(){
 		ArrayList<PlayerRecord> highPenaltyPlayers = new ArrayList<PlayerRecord>();
 		PlayerRecord highestPenalties = players.first();
@@ -86,6 +123,10 @@ public class NHLList {
 		}
 	}
 	
+	/* Iterates through the players list to determine 
+	 * the player with the highest number of gameWinners
+	 * then prints out their name and team 
+	 */
 	public void mvp(){
 		ArrayList<PlayerRecord> mvps = new ArrayList<PlayerRecord>();
 		PlayerRecord mvp = players.first();
@@ -108,6 +149,10 @@ public class NHLList {
 		}
 	}
 	
+	/* Iterates through the players list to determine 
+	 * the player with the highest number of shots on goal
+	 * then prints out their name and team 
+	 */
 	public void mostPromising(){
 		ArrayList<PlayerRecord> mostPromisingPlayers = new ArrayList<PlayerRecord>();
 		PlayerRecord mostPromising = players.first();
@@ -130,6 +175,10 @@ public class NHLList {
 		}
 	}
 	
+	/* Iterates through the teams list to determine 
+	 * the team with the highest number of penalty
+	 * minutes then prints out the team 
+	 */
 	public void mostAggressiveTeams(){
 		ArrayList<TeamRecord> highPIM = new ArrayList<TeamRecord>();
 		TeamRecord highestPIM = teams.first();
@@ -152,10 +201,10 @@ public class NHLList {
 		}
 	}
 	
-	public void teamsEnumerate(){
-		teams.enumerate();
-	}
-	
+	/* Iterates through the teams list to determine 
+	 * the team with the highest number of game
+	 * winning goals then prints out the team 
+	 */
 	public void mostGWGTeams(){
 		ArrayList<TeamRecord> highGWG = new ArrayList<TeamRecord>();
 		TeamRecord highestGWG = teams.first();
@@ -178,6 +227,10 @@ public class NHLList {
 		}
 	}
 	
+	/* Iterates through the teams list to determine 
+	 * the team with the lowest number of game
+	 * winning goals then prints out the team 
+	 */
 	public void leastGWGTeams(){
 		ArrayList<TeamRecord> lowGWG = new ArrayList<TeamRecord>();
 		TeamRecord lowestGWG = teams.first();
