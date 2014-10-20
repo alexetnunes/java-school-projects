@@ -1,0 +1,11 @@
+
+public class MultiplesDemo {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void multiples(int n, int m){
+		if(m > 0)
+		
+	}
+}

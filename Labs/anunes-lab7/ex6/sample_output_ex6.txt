@@ -1,0 +1,27 @@
+Enter a number of discs: 8
+Execution Time: 0 ms
+Number of Moves: 255
+
+Enter a number of discs: 12
+Execution Time: 1 ms
+Number of Moves: 4095
+
+Enter a number of discs: 16
+Execution Time: 3 ms
+Number of Moves: 65535
+
+Enter a number of discs: 20
+Execution Time: 7 ms
+Number of Moves: 1048575
+
+Enter a number of discs: 24
+Execution Time: 55 ms
+Number of Moves: 16777215
+
+Enter a number of discs: 28
+Execution Time: 842 ms
+Number of Moves: 268435455
+
+Enter a number of discs: 32
+Execution Time: 14082 ms
+Number of Moves: 4294967295

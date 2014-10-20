@@ -1,0 +1,22 @@
+Enter an integer: 123
+1
+2
+3
+
+Enter an integer: 234876
+2
+3
+4
+8
+7
+6
+
+Enter an integer: 098765432
+9
+8
+7
+6
+5
+4
+3
+2

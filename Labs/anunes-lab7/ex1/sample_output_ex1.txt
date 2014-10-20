@@ -1,0 +1,8 @@
+Enter a number to countdown from: 10
+10 9 8 7 6 5 4 3 2 1 Blast Off!
+
+Enter a number to countdown from: 5
+5 4 3 2 1 Blast Off!
+
+Enter a number to countdown from: 13
+13 12 11 10 9 8 7 6 5 4 3 2 1 Blast Off!

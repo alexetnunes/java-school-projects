@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Vertical {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		int n;
+		System.out.print("Enter an integer: ");
+		n = kbd.nextInt();
+		String num = String.valueOf(Math.abs(n));
+
+	}
+	
+	public static void writeVertical(int n){
+		if(n > 0){
+			
+		}
+	}
+
+}

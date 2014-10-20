@@ -1,0 +1,27 @@
+
+public class ex0 {
+	public static void main(String[] args) {
+		System.out.println("Exercise 0A:");
+		for(int i=1; i < 21; i++){
+			System.out.print(fibonacci(i)+" ");
+		}
+
+	}
+	
+	//A recursive method to determine the fibonacci number at a given index.
+	public static long fibonacci(int n) {
+       long fibonacci;
+      
+       if(n<=1){
+    	   fibonacci=1;
+       }else{
+    	   fibonacci = fibonacci(n-1)+fibonacci(n-2);
+       }
+       
+       return fibonacci;
+    }
+	
+	public static long factorial(){
+		
+	}
+}

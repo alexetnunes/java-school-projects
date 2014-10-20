@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+/Users/alexnunes/Desktop/java-school-projects/Labs/anunes-lab7/.metadata/.plugins/org.eclipse.jdt.core
+3090729921.index
+1364946676.index
+643587682.index
+3210022872.index
+1446423277.index
+3477076823.index
+556898939.index

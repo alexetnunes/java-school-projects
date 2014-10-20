@@ -1,0 +1,11 @@
+Enter a number: 2
+Enter the number of multiples: 5
+2 4 6 8 10
+
+Enter a number: 3
+Enter the number of multiples: 6
+3 6 9 12 15 18
+
+Enter a number: 43
+Enter the number of multiples: 5
+43 86 129 172 215 

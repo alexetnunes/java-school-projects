@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Vertical {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		int n;
+		System.out.print("Enter an integer: ");
+		n = kbd.nextInt();
+
+	}
+	
+	public static void writeVertical(int n){
+		if(n > 0){
+			
+		}
+	}
+
+}
