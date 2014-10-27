@@ -1,0 +1,57 @@
+import java.util.*;
+
+
+public class BinaryTreeDemo1 {
+
+	public static void main(String[] args) {
+		Scanner kbd = new Scanner(System.in);
+		String name ="";
+		BinaryTree<String> main = new BinaryTree<String>();
+		
+		System.out.print("Enter a name or done: ");
+		name = kbd.next();
+		int ind = 0;
+	
+		while(!name.equalsIgnoreCase("done")){
+			if(main.isEmpty()){
+				main.makeRoot(name);
+			}else{
+				BinaryTree<String> newNode = new BinaryTree<String>();
+				newNode.makeRoot(name);
+				balancedAttach(main, newNode);
+			}
+			System.out.print("Enter a name or done: ");
+			name = kbd.next();
+		}
+		System.out.print("Pre-Order: \t");
+		BinaryTree.preorder(main);
+		System.out.println();
+		System.out.print("Post-Order: \t");
+		BinaryTree.postorder(main);
+		System.out.println();
+		System.out.print("In-Order: \t");
+		BinaryTree.inorder(main);
+		System.out.println();
+		System.out.print("Level Order: \t");
+		BinaryTree.levelOrder(main);
+		System.out.println("\nNumber of Nodes: "+main.size());
+		System.out.println("Height of Tree: "+main.getHeight());
+		System.out.println("Balanced: "+main.balanced());
+	}
+	
+	public static void balancedAttach(BinaryTree<String> tree, BinaryTree<String> node){
+	if(tree.isEmpty())	
+	}else if(tree.getLeft()==null){
+			tree.attachLeft(node);
+		}else if(tree.getRight() == null && tree.getLeft() != null){
+			tree.attachRight(tree);
+		}else if(tree.getRight() != null && tree.getLeft() != null){
+			if(tree.getLeft().size() > tree.getRight().size()){
+				balancedAttach(tree.getRight(),node);
+			}else{
+				balancedAttach(tree.getLeft(),node);
+			}
+		}
+	}
+
+}

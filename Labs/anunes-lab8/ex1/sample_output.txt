@@ -1,0 +1,49 @@
+****Part One*******
+Pre-Order: A	B	C	F	D	G
+Post-Order: C	F	B	G	D	A
+In-Order: C	B	F	A	D	G
+Level Order: A	B	D	C	F	G
+Number of Nodes: 6
+Height of Tree: 2
+Balanced: true
+
+****Part Two*****
+Enter a name or done: emboar
+Enter a name or done: unfezant
+Enter a name or done: palkia
+Enter a name or done: serperior
+Enter a name or done: samurott
+Enter a name or done: done
+
+Number of Nodes: 5
+Height of Tree: 2
+Balanced: true
+In-Order: serperior	unfezant	samurott	emboar	palkia
+Pre-Order: emboar	unfezant	serperior	samurott	palkia
+Post-Order: serperior	samurott	unfezant	palkia	emboar
+Level Order: emboar	unfezant	palkia	serperior	samurott
+
+
+Enter a name or done: A
+Enter a name or done: B
+Enter a name or done: C
+Enter a name or done: D
+Enter a name or done: E
+Enter a name or done: F
+Enter a name or done: G
+Enter a name or done: H
+Enter a name or done: I
+Enter a name or done: J
+Enter a name or done: K
+Enter a name or done: L
+Enter a name or done: M
+Enter a name or done: N
+Enter a name or done: DONE
+
+Number of Nodes: 14
+Height of Tree: 3
+Balanced: true
+In-Order: H	D	J	B	L	E	N	A	I	F	K	C	M	G
+Pre-Order: A	B	D	H	J	E	L	N	C	F	I	K	G	M
+Post-Order: H	J	D	L	N	E	B	I	K	F	M	G	C	A
+Level Order: A	B	C	D	E	F	G	H	J	L	N	I	K	M

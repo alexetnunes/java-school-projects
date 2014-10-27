@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;anunes-assignment3&apos;&#x0A;- Original project: &apos;anunes-assignment3&apos;&#x0A;- Original elements:&#x0A;     LinkedList.java&#x0A;     Node.java" description="Delete elements" element1="/&lt;{Node.java" element2="/&lt;{LinkedList.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1414336429991" subPackages="false" version="1.0"/>
+</session>

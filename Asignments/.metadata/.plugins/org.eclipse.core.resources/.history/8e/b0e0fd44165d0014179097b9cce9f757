@@ -1,0 +1,16 @@
+
+public class Pair {
+	private char letter;
+	private int count;
+	
+	public Pair(){
+		this.count = 0;
+	}
+	
+	public Pair(char letter) {
+		this.letter = letter;
+		this.count = 0;
+	}
+	
+	
+}

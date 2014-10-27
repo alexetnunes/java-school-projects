@@ -1,0 +1,20 @@
+
+public class BinaryTreeDemo {
+
+	public static void main(String[] args) {
+		BinaryTree<String> A = new BinaryTree<String>();
+		BinaryTree<String> B = new BinaryTree<String>();
+		BinaryTree<String> C = new BinaryTree<String>();
+		BinaryTree<String> D = new BinaryTree<String>();
+		BinaryTree<String> F = new BinaryTree<String>();
+		BinaryTree<String> G = new BinaryTree<String>();
+		A.makeRoot("A");
+		B.makeRoot("B");
+		C.makeRoot("C");
+		D.makeRoot("D");
+		F.makeRoot("F");
+		G.makeRoot("G");
+
+	}
+
+}

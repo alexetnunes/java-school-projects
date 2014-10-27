@@ -1,0 +1,5 @@
+
+public class Pair {
+	private char letter;
+	private int count;
+}
