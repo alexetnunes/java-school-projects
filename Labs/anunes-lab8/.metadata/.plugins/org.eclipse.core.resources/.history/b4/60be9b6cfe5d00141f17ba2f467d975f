@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class BinaryTree<T> 
 {
@@ -179,14 +179,12 @@ public class BinaryTree<T>
 	
 	//returns the height of the tree using recursion
 	public int getHeight(){
-		if(left != null && right != null){
-			return 1+ Math.max(left.getHeight(), right.getHeight());
-		}else if(left != null){
-			return 1 + left.getHeight();
-		}else if(right != null){
-			return 1 + right.getHeight();
-		}else{
+		if(left == null && right == null){
 			return 0;
+		}else if (left.size() >= ){
+			return 1+left.getHeight();
+		}else{
+			return 1 + right.getHeight();
 		}
 	}
 	

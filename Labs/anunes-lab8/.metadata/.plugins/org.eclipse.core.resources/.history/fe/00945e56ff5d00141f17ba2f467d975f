@@ -184,7 +184,7 @@ public class BinaryTree<T>
 		}else if(left != null){
 			return 1 + left.getHeight();
 		}else if(right != null){
-			return 1 + right.getHeight();
+			return 1 + left.getHeight();
 		}else{
 			return 0;
 		}

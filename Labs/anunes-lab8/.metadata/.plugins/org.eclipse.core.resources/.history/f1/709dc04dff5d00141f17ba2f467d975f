@@ -182,9 +182,7 @@ public class BinaryTree<T>
 		if(left != null && right != null){
 			return 1+ Math.max(left.getHeight(), right.getHeight());
 		}else if(left != null){
-			return 1 + left.getHeight();
-		}else if(right != null){
-			return 1 + right.getHeight();
+			
 		}else{
 			return 0;
 		}

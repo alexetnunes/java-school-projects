@@ -38,12 +38,24 @@ Enter a name or done: K
 Enter a name or done: L
 Enter a name or done: M
 Enter a name or done: N
+Enter a name or done: O
+Enter a name or done: P
+Enter a name or done: Q
+Enter a name or done: R
+Enter a name or done: S
+Enter a name or done: T
+Enter a name or done: U
+Enter a name or done: V
+Enter a name or done: W
+Enter a name or done: X
+Enter a name or done: Y
+Enter a name or done: Z
 Enter a name or done: DONE
 
-Number of Nodes: 14
-Height of Tree: 3
+Number of Nodes: 26
+Height of Tree: 4
 Balanced: true
-In-Order: H	D	J	B	L	E	N	A	I	F	K	C	M	G
-Pre-Order: A	B	D	H	J	E	L	N	C	F	I	K	G	M
-Post-Order: H	J	D	L	N	E	B	I	K	F	M	G	C	A
-Level Order: A	B	C	D	E	F	G	H	J	L	N	I	K	M
+In-Order: P	H	T	D	X	J	B	R	L	V	E	Z	N	A	Q	I	U	F	Y	K	C	S	M	W	G	O
+Pre-Order: A	B	D	H	P	T	J	X	E	L	R	V	N	Z	C	F	I	Q	U	K	Y	G	M	S	W	O
+Post-Order: P	T	H	X	J	D	R	V	L	Z	N	E	B	Q	U	I	Y	K	F	S	W	M	O	G	C	A
+Level Order: A	B	C	D	E	F	G	H	J	L	N	I	K	M	O	P	T	X	R	V	Z	Q	U	Y	S	W	
