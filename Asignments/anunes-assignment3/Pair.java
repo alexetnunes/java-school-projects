@@ -40,16 +40,21 @@ public class Pair {
 		count++;
 	}
 
+	
 	public double getProbability() {
-		setProbability();
 		return probability;
 	}
 
-	public void setProbability() {
+	public void setProbability(double probability) {
+		this.probability = probability;
+	}
+
+	public double calcProbability() {
 		BigDecimal bd = new BigDecimal((double)count/total);
 	    bd = bd.setScale(3, RoundingMode.HALF_UP);
-		this.probability = bd.doubleValue();
+		return bd.doubleValue();
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -67,8 +72,12 @@ public class Pair {
 
 	@Override
 	public String toString() {
-		return letter + " : [Count= " + count + ", Probability="+ getProbability()+"]";
+		return letter + "="+getProbability();
 	}
+	
+	
+	
+	
 	
 	
 	

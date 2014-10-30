@@ -7,10 +7,10 @@ import java.util.ArrayList;
 * Dalhousie University
 * Faculty of Computer Science
 *
-* A Queue class that implements a Linkedqueue
+* A Queue class that implements a queue
 * and a cursor, FIFO
 */
-public class Queue<T> {
+public class Queue<T extends Comparable<T>> {
 
 	//Variables
 	private ArrayList<T> queue;
@@ -27,7 +27,7 @@ public class Queue<T> {
 		queue.add(item);
 	}
 	
-	//Adds an item to the end of the queue
+	//Adds an item to inserted into the queue
 	public void insert(T item){
 		if(queue.isEmpty()){
 			queue.add(item);
