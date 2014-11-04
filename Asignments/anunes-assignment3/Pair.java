@@ -2,7 +2,7 @@ import java.math.*;
 
 
 public class Pair {
-	private char letter;
+	private char value;
 	private int count;
 	private double probability;
 	private static int total=0;
@@ -11,17 +11,17 @@ public class Pair {
 		this.count = 0;
 	}
 	
-	public Pair(char letter) {
-		this.letter = letter;
+	public Pair(char value) {
+		this.value = value;
 		this.count = 0;
 	}
 
-	public char getLetter() {
-		return letter;
+	public char getValue() {
+		return value;
 	}
 
-	public void setLetter(char letter) {
-		this.letter = letter;
+	public void setValue(char value) {
+		this.value = value;
 	}
 
 	public static int getTotal() {
@@ -65,14 +65,14 @@ public class Pair {
 		if (getClass() != obj.getClass())
 			return false;
 		Pair other = (Pair) obj;
-		if (letter != other.letter)
+		if (value != other.value)
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return letter + "="+getProbability();
+		return value + "="+getProbability();
 	}
 	
 	

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BinaryTree<T> 
 {
 	private T data;
@@ -68,7 +70,7 @@ public class BinaryTree<T>
 		}
 		else
 		{
-			
+				
 				tree.setParent(this);
 				this.setLeft(tree);
 		}
@@ -84,7 +86,7 @@ public class BinaryTree<T>
 		}
 		else
 		{
-	
+			
 				tree.setParent(this);
 				this.setRight(tree);
 		}
@@ -159,6 +161,25 @@ public class BinaryTree<T>
 			postorder(t.getLeft());
 			postorder(t.getRight());
 			System.out.print(t.getData() + "\t");
+		}
+	}
+	
+	//Prints out all objects of the tree by level
+	public static<T> void levelOrder(BinaryTree<T> tree){
+		ArrayList<BinaryTree<T>> queue = new ArrayList<BinaryTree<T>>();
+		if(tree != null){
+			queue.add(tree);
+		}
+		
+		while(!queue.isEmpty()){
+			BinaryTree<T> t = queue.remove(0);
+			System.out.print(t.getData()+"\t");
+			if(t.getLeft()!= null){
+				queue.add(t.getLeft());
+			}
+			if(t.getRight() != null){
+				queue.add(t.getRight());
+			}
 		}
 	}
 	
