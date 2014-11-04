@@ -14,8 +14,8 @@ public class HuffmanDemo {
 		StringTokenizer token;
 		ArrayList<Pair> characters = new ArrayList<Pair>();
 		ArrayList<Pair> chars = new ArrayList<Pair>();
-		
-		
+
+
 		while (inputFile.hasNext())
 		{
 			line = inputFile.nextLine();
@@ -34,17 +34,17 @@ public class HuffmanDemo {
 			}
 		}
 		inputFile.close();
-		
+
 		for(int h = 0; h < characters.size(); h++){
 			double probability = characters.get(h).calcProbability();
 			characters.get(h).setProbability(probability);
 		}
 
-		
-		
+
+
 		ArrayList<BinaryTree<Pair>> S = new ArrayList<BinaryTree<Pair>>();
 		ArrayList<BinaryTree<Pair>> T = new ArrayList<BinaryTree<Pair>>();
-		
+
 		for(int i = characters.size(); i > 0; i--){
 			Pair temp = characters.remove(smallestIndex(characters));
 			BinaryTree<Pair> newBTPair = new BinaryTree<Pair>();
@@ -53,8 +53,8 @@ public class HuffmanDemo {
 			chars.add(temp);
 		}
 
-		
-		
+
+
 		BinaryTree<Pair> sm1, sm2;
 		BinaryTree<Pair> a, root = null;
 		Pair p;
@@ -64,42 +64,42 @@ public class HuffmanDemo {
 			p = new Pair('0');
 			a= new BinaryTree<Pair>();
 			if(sm1 != null && sm2  != null){
-				
+
 				//System.out.println(sm1.getData()+"   "+sm2.getData());
-				p.setProbability(sm1.getData().getProbability()+sm2.getData().getProbability());				
+				p.setProbability(sm1.getData().getProbability()+sm2.getData().getProbability());
 				a.makeRoot(p);
 				a.attachLeft(sm1);
 				a.attachRight(sm2);
-				
+
 			}
 			if(a != null){
 				T.add(a);
 				root = a;
 			}
-			
+
 		}
-		
+
 		while(T.size() > 1){
 			sm1=smallestOfTwoTrees(S,T);
 			sm2=smallestOfTwoTrees(S,T);
 			p = new Pair('0');
 			a= new BinaryTree<Pair>();
 			if(sm1 != null && sm2  != null){
-				
+
 				//System.out.println(sm1.getData()+"   "+sm2.getData());
-				p.setProbability(sm1.getData().getProbability()+sm2.getData().getProbability());				
+				p.setProbability(sm1.getData().getProbability()+sm2.getData().getProbability());
 				a.makeRoot(p);
 				a.attachLeft(sm1);
 				a.attachRight(sm2);
-				
+
 			}
 			if(a != null){
 				T.add(a);
 				root = a;
 			}
-			
+
 		}
-		
+
 		root.getData().setProbability(1);
 		String[] encoding = findEncoding(root);
 		BufferedWriter writer = null;
@@ -112,17 +112,17 @@ public class HuffmanDemo {
 			writer.write(rowOutput);
 		}
 		writer.close();
-		
+
 		System.out.println("Huffman encoding determined.");
-		
-		
+
+
 		writer = null;
 		logFile = new File("Encoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
 		file = new File(filename);
 		inputFile = new Scanner(file);
-		
-		
+
+
 		while (inputFile.hasNext())
 		{
 			line = inputFile.nextLine();
@@ -138,25 +138,25 @@ public class HuffmanDemo {
 						encode +="\t";
 				}
 				writer.write(encode);
-				
+
 
 			}
 			writer.write("\n");
 		}
 		inputFile.close();
 		writer.close();
-		
+
 		System.out.println("Text encoded.");
-		
-		
+
+
 		writer = null;
 		logFile = new File("Decoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
 		file = new File("Encoded.txt");
 		inputFile = new Scanner(file);
 		String section;
-		
-		
+
+
 		while (inputFile.hasNext())
 		{
 			line = inputFile.nextLine();
@@ -173,7 +173,7 @@ public class HuffmanDemo {
 					}else if(section.charAt(i) == '1') {
 						curr = curr.getRight();
 					}
-					
+
 					if(curr.getData().getValue()!='0'){
 						decode += curr.getData().getValue();
 						curr = root;
@@ -181,7 +181,7 @@ public class HuffmanDemo {
 				}
 				decode +=" ";
 				writer.write(decode);
-				
+
 
 			}
 			writer.write("\n");
@@ -190,10 +190,10 @@ public class HuffmanDemo {
 		writer.close();
 		System.out.println("Text decoded.");
 	}
-	
-	
+
+
 	/*
-	 * 
+	 * Helper method to determine the smallest probability between two ArrayList<BinaryTree<pair>>
 	 */
 	public static BinaryTree<Pair> smallestOfTwoTrees(ArrayList<BinaryTree<Pair>> list1, ArrayList<BinaryTree<Pair>> list2){
 		BinaryTree<Pair> smallest = null;
@@ -214,10 +214,10 @@ public class HuffmanDemo {
 		}
 		return smallest;
 	}
-	
-	
+
+
 	/*
-	 * 
+	 *
 	 */
 	public static int BTPairSmallestIndex(ArrayList<BinaryTree<Pair>> list){
 		int smallest = 0;
@@ -228,11 +228,11 @@ public class HuffmanDemo {
 				smallestBT = list.get(i);
 			}
 		}
-		
+
 		return smallest;
 	}
 	/*
-	 * 
+	 *
 	 */
 	public static int smallestIndex(ArrayList<Pair> list){
 		int smallest = 0;
@@ -243,29 +243,29 @@ public class HuffmanDemo {
 				smallestPair = list.get(smallest);
 			}
 		}
-		
+
 		return smallest;
 	}
-	
+
 	/*
-	 * 
+	 *
 	 */
 	public static void findEncoding(BinaryTree<Pair> t, String[] a, String prefix) {
 		if (t.getLeft()==null&& t.getRight()==null)
-		{	
+		{
 			a[(byte)(t.getData().getValue())] = prefix;
 		} else {
 			findEncoding(t.getLeft(), a, prefix+"0");
-			findEncoding(t.getRight(), a, prefix+"1"); 
+			findEncoding(t.getRight(), a, prefix+"1");
 		}
 	}
-	
+
 	/*
-	 * 
+	 *
 	 */
 	public static String[] findEncoding(BinaryTree<Pair> t) {
 		String[] result = new String[256]; findEncoding(t, result, "");
 		return result;
 	}
-	
+
 }
