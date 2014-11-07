@@ -7,8 +7,6 @@
 *
 * Demo Class to show the Huffman encoding
 * and decoding algorithm
-* 
-* Uses '0' as hold character
 */
 import java.io.*;
 import java.util.*;

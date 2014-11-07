@@ -7,8 +7,6 @@
 *
 * Demo Class to show the Huffman encoding
 * and decoding algorithm
-* 
-* Uses '0' as hold character
 */
 import java.io.*;
 import java.util.*;
@@ -142,7 +140,7 @@ public class HuffmanDemo {
 
 		System.out.println("Huffman encoding determined.");
 
-		//Encode the inputed text file and write to file
+
 		writer = null;
 		logFile = new File("Encoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
@@ -175,7 +173,7 @@ public class HuffmanDemo {
 
 		System.out.println("Text encoded.");
 
-		//Decode the inputed text file using the huffman tree and write to file
+
 		writer = null;
 		logFile = new File("Decoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));

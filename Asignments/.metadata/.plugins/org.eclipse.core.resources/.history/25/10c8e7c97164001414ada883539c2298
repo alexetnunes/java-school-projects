@@ -59,8 +59,7 @@ public class Pair {
 	public void setProbability(double probability) {
 		this.probability = probability;
 	}
-	
-	//Calculates probability based on local and total count
+
 	public double calcProbability() {
 		BigDecimal bd = new BigDecimal((double)count/total);
 	    bd = bd.setScale(3, RoundingMode.HALF_UP);

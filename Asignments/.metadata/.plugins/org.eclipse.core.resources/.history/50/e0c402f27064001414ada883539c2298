@@ -7,8 +7,6 @@
 *
 * Demo Class to show the Huffman encoding
 * and decoding algorithm
-* 
-* Uses '0' as hold character
 */
 import java.io.*;
 import java.util.*;
@@ -102,10 +100,7 @@ public class HuffmanDemo {
 			}
 
 		}
-		
-		/*
-		 * Reduce T to one Node to create the root of the Huffman tree
-		 */
+
 		while(T.size() > 1){
 			sm1=smallestOfTwoTrees(S,T);
 			sm2=smallestOfTwoTrees(S,T);
@@ -126,8 +121,6 @@ public class HuffmanDemo {
 		}
 
 		root.getData().setProbability(1);
-		
-		//Find encoding and print the table to file
 		String[] encoding = findEncoding(root);
 		BufferedWriter writer = null;
 		File logFile = new File("Huffman.txt");
@@ -142,7 +135,7 @@ public class HuffmanDemo {
 
 		System.out.println("Huffman encoding determined.");
 
-		//Encode the inputed text file and write to file
+
 		writer = null;
 		logFile = new File("Encoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
@@ -175,7 +168,7 @@ public class HuffmanDemo {
 
 		System.out.println("Text encoded.");
 
-		//Decode the inputed text file using the huffman tree and write to file
+
 		writer = null;
 		logFile = new File("Decoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));

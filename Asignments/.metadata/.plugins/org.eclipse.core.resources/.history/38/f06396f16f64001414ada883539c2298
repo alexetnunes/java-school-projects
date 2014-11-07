@@ -1,15 +1,3 @@
-/*
-* HuffmanDemo
-* Alex Nunes
-* 04/11/2014
-* Dalhousie University
-* Faculty of Computer Science
-*
-* Demo Class to show the Huffman encoding
-* and decoding algorithm
-* 
-* Uses '0' as hold character
-*/
 import java.io.*;
 import java.util.*;
 public class HuffmanDemo {
@@ -51,7 +39,7 @@ public class HuffmanDemo {
 		}
 		inputFile.close();
 
-		// Iterate and calculate the probability for each Pair character
+		// Iterate and calclate the probability for each Pair character
 		for(int h = 0; h < characters.size(); h++){
 			double probability = characters.get(h).calcProbability();
 			characters.get(h).setProbability(probability);
@@ -64,8 +52,7 @@ public class HuffmanDemo {
 
 
 		/*
-		 * Place all characters into a BinaryTree ArrayList
-		 * Ordered smallest to largest for debugging purposes
+		 * Place all characters
 		 */
 		for(int i = characters.size(); i > 0; i--){
 			Pair temp = characters.remove(smallestIndex(characters));
@@ -76,11 +63,7 @@ public class HuffmanDemo {
 		}
 
 
-		/*
-		 * Find the two smallest probabilities between S and T
-		 * and create a small binary tree with combined probability
-		 * in the parent then place back in to  T
-		 */
+
 		BinaryTree<Pair> sm1, sm2;
 		BinaryTree<Pair> a, root = null;
 		Pair p;
@@ -102,10 +85,7 @@ public class HuffmanDemo {
 			}
 
 		}
-		
-		/*
-		 * Reduce T to one Node to create the root of the Huffman tree
-		 */
+
 		while(T.size() > 1){
 			sm1=smallestOfTwoTrees(S,T);
 			sm2=smallestOfTwoTrees(S,T);
@@ -126,8 +106,6 @@ public class HuffmanDemo {
 		}
 
 		root.getData().setProbability(1);
-		
-		//Find encoding and print the table to file
 		String[] encoding = findEncoding(root);
 		BufferedWriter writer = null;
 		File logFile = new File("Huffman.txt");
@@ -142,7 +120,7 @@ public class HuffmanDemo {
 
 		System.out.println("Huffman encoding determined.");
 
-		//Encode the inputed text file and write to file
+
 		writer = null;
 		logFile = new File("Encoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
@@ -175,7 +153,7 @@ public class HuffmanDemo {
 
 		System.out.println("Text encoded.");
 
-		//Decode the inputed text file using the huffman tree and write to file
+
 		writer = null;
 		logFile = new File("Decoded.txt");
 		writer = new BufferedWriter(new FileWriter(logFile));
@@ -244,8 +222,7 @@ public class HuffmanDemo {
 
 
 	/*
-	 * Helper method to find the index of the smallest probability
-	 * in an ArrayList<BinaryTree<Pair>>
+	 *
 	 */
 	public static int BTPairSmallestIndex(ArrayList<BinaryTree<Pair>> list){
 		int smallest = 0;
@@ -260,8 +237,7 @@ public class HuffmanDemo {
 		return smallest;
 	}
 	/*
-	 * Helper method to find the smallest probability in
-	 * an ArrayList of Pairs
+	 *
 	 */
 	public static int smallestIndex(ArrayList<Pair> list){
 		int smallest = 0;
@@ -277,7 +253,7 @@ public class HuffmanDemo {
 	}
 
 	/*
-	 * Huffman encoding methods
+	 *
 	 */
 	public static void findEncoding(BinaryTree<Pair> t, String[] a, String prefix) {
 		if (t.getLeft()==null&& t.getRight()==null)
@@ -289,6 +265,9 @@ public class HuffmanDemo {
 		}
 	}
 
+	/*
+	 *
+	 */
 	public static String[] findEncoding(BinaryTree<Pair> t) {
 		String[] result = new String[256]; findEncoding(t, result, "");
 		return result;
