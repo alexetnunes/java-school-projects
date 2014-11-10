@@ -1,0 +1,62 @@
+Exercise 1
+Enter a word (when done enter -1): java
+Enter a word (when done enter -1): python
+Enter a word (when done enter -1): ruby
+Enter a word (when done enter -1): c
+Enter a word (when done enter -1): c++
+Enter a word (when done enter -1): php
+Enter a word (when done enter -1): zephir
+Enter a word (when done enter -1): -1
+zephir ruby python php java c++ c 
+
+
+Exercise 2
+Enter a word (when done enter -1): bob
+Enter a word (when done enter -1): jack
+Enter a word (when done enter -1): lucy
+Enter a word (when done enter -1): andy
+Enter a word (when done enter -1): charlie
+Enter a word (when done enter -1): zac
+Enter a word (when done enter -1): -1
+andy bob charlie jack lucy zac
+
+
+Exercise 3
+Enter a word (when done enter -1): a
+Enter a word (when done enter -1): and
+Enter a word (when done enter -1): t
+Enter a word (when done enter -1): g
+Enter a word (when done enter -1): h
+Enter a word (when done enter -1): j
+Enter a word (when done enter -1): k
+Enter a word (when done enter -1): i
+Enter a word (when done enter -1): t
+Enter a word (when done enter -1): ds
+Enter a word (when done enter -1): -1
+Smallest: a
+
+
+Exercise 4
+Enter a word (when done enter -1): jack
+Enter a word (when done enter -1): taco
+Enter a word (when done enter -1): tough
+Enter a word (when done enter -1): java
+Enter a word (when done enter -1): other
+Enter a word (when done enter -1): other
+Enter a word (when done enter -1): -1
+Enter a word to search for :other
+other : 1
+
+
+Exercise 5
+Enter a word (when done enter -1): yin
+Enter a word (when done enter -1): yang
+Enter a word (when done enter -1): bob
+Enter a word (when done enter -1): yang
+Enter a word (when done enter -1): taco
+Enter a word (when done enter -1): fridge
+Enter a word (when done enter -1): get
+Enter a word (when done enter -1): -1
+[yin, yang, get, yang, taco, bob, fridge]
+Enter a word to replace and what to replace it with :yang a
+yin taco get fridge bob a a

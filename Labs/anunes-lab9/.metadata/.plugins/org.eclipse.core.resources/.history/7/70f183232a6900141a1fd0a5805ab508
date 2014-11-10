@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ex5Demo {
+	public static void main(String[] args) {
+		Heap<String> h = new Heap<String>();
+		Scanner kbd = new Scanner(System.in);
+		String word = "";
+		
+		System.out.print("Enter a word (when done enter -1): ");
+		word = kbd.next();
+		
+		while(!word.equalsIgnoreCase("-1")){
+			h.add(word);
+			System.out.print("Enter a word (when done enter -1): ");
+			word = kbd.next();
+		}
+		while(h.findItem("yin") >= 0){
+			
+		}
+		
+		h.enumerate();
+		
+		h.changePriority("yin", "bang");
+		h.enumerate();
+		while(!h.isEmpty()){
+			System.out.print(h.deleteMax()+" ");
+		}
+	}
+
+}

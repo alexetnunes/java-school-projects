@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class Ex1Demo {
+	public static void main(String[] args) {
+		Heap<String> h = new Heap<String>();
+		Scanner kbd = new Scanner(System.in);
+		String word =  "";
+		
+	}
+
+}
