@@ -1,0 +1,10 @@
+
+public class HeapDemo {
+
+	public static void main(String[] args) {
+		Process p1 = new Process(1,1,1,1);
+		Process p2 = new Process(2,2,2,2);
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.*;
+public class HeapDemo {
+
+	public static void main(String[] args) throws IOException {
+		//Declare scanner
+		Scanner kbd = new Scanner(System.in);
+	
+		//take in file and declare variables
+		System.out.print("Enter the filename to read from: ");
+		String filename = kbd.nextLine();
+		File file = new File(filename);
+		Scanner inputFile = new Scanner(file);
+	}
+
+}
