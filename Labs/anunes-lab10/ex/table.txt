@@ -1,0 +1,11 @@
+Table Size      Number of keys      Load Factor     Number of Collisions      Longest List
+10              10                  1.0             4                         3
+10              20                  2.0             13                        6
+10              30                  3.0             20                        8
+10              40                  4.0             30                        8
+10              50                  5.0             40                        9
+10              60                  6.0             50                        14
+10              70                  7.0             60                        13
+10              80                  8.0             70                        12
+10              90                  9.0             80                        16
+10              100                 10.0            90                        16

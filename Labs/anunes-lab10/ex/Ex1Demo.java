@@ -1,0 +1,70 @@
+/* 
+ * Ex1Demo Class
+ * Alex Nunes
+ * 16/11/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ * 
+ * Demo class to shows how to use a
+ * LinkedList to show how to deal with 
+ * collisions
+ */
+import java.util.*;
+public class Ex1Demo {
+
+	public static void main(String[] args) {
+		
+		//Declare variables and scanner
+		int table_size, nums, collisions = 0, longest = 0;
+		double lf = 0;
+		Scanner kbd = new Scanner(System.in);
+		
+		//Take in table size and create LinkedList Array
+		System.out.print("Enter table size: ");
+		table_size = kbd.nextInt();
+		LinkedListN[] hashTable = new LinkedListN[table_size];
+		
+		
+		//Initiate each LinkedList in the Array
+		for(int h = 0; h < hashTable.length; h++){
+        	hashTable[h] = new LinkedListN();
+        }
+		
+		//Take in number of keys
+		System.out.print("Enter the number of integers to generate: ");
+		nums = kbd.nextInt();
+		
+		Random random = new Random() ;
+        int key;
+       
+        //Add keys to the array creating the hash map
+        for(int i = 0; i < nums; i++){
+        	key = random.nextInt(10000);
+        	hashTable[key%table_size].add(key);
+        }
+        
+        //Print each array and determine the longest table and number of collisions
+        System.out.println();
+        for(int j = 0; j < hashTable.length; j++){
+        	if(hashTable[j].size() > longest){
+        		longest = hashTable[j].size();
+        	}
+        	if(hashTable[j].isEmpty()){
+        		System.out.println("-->Empty");
+        	}else{
+        		collisions += (hashTable[j].size()-1);
+        		hashTable[j].enumerate();
+        	}
+        }
+        
+        //Print Information
+        lf = (double)nums/table_size;
+        System.out.println("\nStatistics: ");
+        System.out.println("Table Size: " + table_size);
+        System.out.println("Number of Keys: " + nums);
+        System.out.println("Load Factor: " + lf);
+        System.out.println("Number of Collisons: " + collisions);
+        System.out.println("Longest List: " + longest);
+	}
+
+}

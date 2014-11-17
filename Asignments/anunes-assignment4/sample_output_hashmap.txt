@@ -1,0 +1,55 @@
+Username: cdude
+Password: GH456!32
+
+Either the username or password is incorrect. You have 2 more attempts.
+
+Username: cdude
+
+Password: gh456!32
+
+Login successful.
+Welcome, Cool Dude!
+
+
+
+Username: icrane
+Password: qwerty123
+
+Login successful.
+Welcome, Ichabod Crane!
+
+
+
+Username: epokemon
+Password: emb
+
+Either the username or password is incorrect. You have 2 more attempts.
+
+Username: epokemon
+Password: iusfy
+
+Either the username or password is incorrect. You have 1 more attempts.
+
+Username: epokemon
+Password: password124
+Sorry. Incorrect login. Please contact the system administrator.
+
+
+
+
+
+Username: epokemon
+Password: qweq
+
+Either the username or password is incorrect. You have 2 more attempts.
+
+Username: epokemon
+Password: PASSWORD123
+
+Either the username or password is incorrect. You have 1 more attempts.
+
+Username: epokemon
+Password: password123
+
+Login successful.
+Welcome, Emboar Pokemon!

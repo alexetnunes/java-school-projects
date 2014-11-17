@@ -1,9 +1,0 @@
-
-public class HeapDemo {
-
-	public static void main(String[] args) {
-		Process p1 = new Process();
-
-	}
-
-}

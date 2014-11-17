@@ -1,10 +1,21 @@
-
+/*
+ * Process Class
+ * Alex Nunes
+ * 16/11/2014
+ * Dalhousie University
+ * Faculty of Computer Science
+ *
+ * Process class that contains an id,
+ * time required, priority, and arrival time
+ */
 public class Process implements Comparable<Process>{
+	//Declare Variables
 	private	int	id;
 	private	int	timeReqd;
 	private	int	priority;
 	private	int	timeArrival;
 	
+	//Constructors
 	public Process(){
 		
 	}
@@ -16,7 +27,8 @@ public class Process implements Comparable<Process>{
 		this.priority = priority;
 		this.timeArrival = timeArrival;
 	}
-
+	
+	//Getters and Setters
 	public int getId() {
 		return id;
 	}
@@ -48,13 +60,23 @@ public class Process implements Comparable<Process>{
 	public void setTimeArrival(int timeArrival) {
 		this.timeArrival = timeArrival;
 	}
+	
+	
+	//Method to low time required by one
+	public void timeDown(){
+		if(this.timeReqd > 0){
+			this.timeReqd -= 1;
+		}
+	}
 
-
+	
+	//ToString
 	@Override
 	public String toString() {
 		return  "("+id + ", "+ timeReqd + ", "+ priority +")";
 	}
 	
+	//Overridden compareTo method for a heap
 	@Override
 	public int compareTo(Process o) {
 		if(this.priority < o.getPriority()){

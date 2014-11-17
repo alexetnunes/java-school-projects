@@ -1,0 +1,47 @@
+import java.util.*;
+public class Ex1Demo {
+
+	public static void main(String[] args) {
+		int table_size, nums;
+		Scanner kbd = new Scanner(System.in);
+		
+		System.out.print("Enter table size: ");
+		table_size = kbd.nextInt();
+		LinkedListN hTable = new LinkedListN();
+		LinkedListN[] hashTable = new LinkedListN[table_size];
+		
+		for(int h = 0; h < hashTable.length; h++){
+        	hashTable[h] = new LinkedListN();
+        }
+		
+		hTable.add(10);
+		System.out.print("Enter the number of integers to generate: ");
+		nums = kbd.nextInt();
+		
+		Random random = new Random() ;
+        int key;
+       
+        
+        for(int i = 0; i < nums; i++){
+        	key = random.nextInt(10000);
+        	hashTable[key%table_size].add(key);
+        }
+        
+        System.out.println();
+        for(int j = 0; j < hashTable.length; j++){
+        	if(hashTable[j].isEmpty()){
+        		System.out.println("-->Empty");
+        	}else{
+        		hashTable[j].enumerate();
+        	}
+        }
+        
+        System.out.println("Statistics: ");
+        System.out.println("Table Size: " + table_size);
+        System.out.println("Number of Keys: " + nums);
+        System.out.println("Load Factor: ");
+        System.out.println("Number of Collisons: ");
+        System.out.println("Longest List: " );
+	}
+
+}

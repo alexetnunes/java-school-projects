@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+public class HashMapDemo {
+
+	public static void main(String[] args) throws IOException{
+		//Declare scanner
+		Scanner kbd = new Scanner(System.in);
+	
+		//take in file and declare variables
+		System.out.print("Enter the filename to read from: ");
+		String filename = kbd.nextLine();
+		File file = new File(filename);
+		Scanner inputFile = new Scanner(file);
+		String line, name, username, password;
+		StringTokenizer token;
+		HashMap<String, String> passwords = new HashMap<String, String>();
+		HashMap<String, String> names = new HashMap<String, String>();
+		
+		while (inputFile.hasNext())
+		{
+			line = inputFile.nextLine();
+			token = new StringTokenizer(line, "\t");
+			name = token.nextToken()+" "+ token.nextToken();
+			username = token.nextToken().replaceAll("\\s","");
+			password = token.nextToken().replaceAll("\\s","");
+			System.out.println(name +"-"+username+"-"+password);
+			passwords.put(username, password);
+			passwords.put(username, name);
+
+		}
+		inputFile.close();
+
+	}
+
+}
