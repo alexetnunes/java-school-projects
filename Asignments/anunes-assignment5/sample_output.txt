@@ -1,0 +1,38 @@
+Enter the filename to read from: input_sample_1.txt
+  A B C D E
+A 0 1 0 1 1
+B 1 0 0 1 1
+C 0 0 0 1 0
+D 1 1 1 0 0
+E 1 1 0 0 0
+
+Graph Traversal:
+A B D C E
+
+
+Enter the filename to read from: input_sample_2.txt
+  A B C D E F G H
+A 0 1 0 1 1 0 1 0
+B 1 0 0 1 1 1 0 0
+C 0 0 0 1 0 1 0 1
+D 1 1 1 0 0 1 0 0
+E 1 1 0 0 0 0 0 0
+F 0 1 1 1 0 0 0 0
+G 1 0 0 0 0 0 0 1
+H 0 0 1 0 0 0 1 0
+
+Graph Traversal:
+A B D C F H G E
+
+
+Enter the filename to read from: input_sample_3.txt
+  A B C D E F
+A 0 1 0 1 1 0
+B 1 0 0 1 1 1
+C 0 0 0 1 0 1
+D 1 1 1 0 0 1
+E 1 1 0 0 0 0
+F 0 1 1 1 0 0
+
+Graph Traversal:
+A B D C F E 

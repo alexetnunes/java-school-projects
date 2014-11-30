@@ -5,9 +5,8 @@
  * Dalhousie University
  * Faculty of Computer Science
  *
- * Demo to display a simple depth 
- * firstsearch traversal of a 
- * non-directional graph
+ * Demo to display a simple search traversal
+ * of a non-directional graph
  */
 import java.util.*;
 import java.io.*;

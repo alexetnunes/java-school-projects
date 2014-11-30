@@ -5,9 +5,8 @@
  * Dalhousie University
  * Faculty of Computer Science
  *
- * Demo to display a simple depth 
- * firstsearch traversal of a 
- * non-directional graph
+ * Demo to display a simple search traversal
+ * of a non-directional graph
  */
 import java.util.*;
 import java.io.*;
@@ -53,13 +52,13 @@ public class GraphDemo {
 		
 	}
 	
-	//Depth First Search starter method
+	//
 	public static void DFS(int[][] a){
 		 ArrayList<Integer> visited = new  ArrayList<Integer>();
 		DFS(a, 65, visited);
 	}
 	
-	//Depth First Search Algorithm
+	//
 	public static void DFS(int[][] a, int v, ArrayList<Integer> visited){
 		visited.add(v);
 		System.out.print((char)v +" ");

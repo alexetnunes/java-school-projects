@@ -6,8 +6,8 @@
  * Faculty of Computer Science
  *
  * Demo to display a simple depth 
- * firstsearch traversal of a 
- * non-directional graph
+ * firstsearch traversal
+ * of a non-directional graph
  */
 import java.util.*;
 import java.io.*;
